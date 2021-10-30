@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: Helvetica;
+  src: url("../public/fonts/HelveticaNeueMediumExtended.otf");
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: Sprat;
+  src: url("../public/fonts/Sprat-RegularMedium.otf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Sprat;
+  src: url("../public/fonts/Sprat-RegularBold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Sprat;
+  src: url("../public/fonts/Sprat-RegularBlack.otf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: Sprat;
+  src: url("../public/fonts/Sprat-ExtendedBlack.otf");
+  font-weight: 900;
+}
