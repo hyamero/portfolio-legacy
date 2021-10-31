@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .container {
+    @apply max-w-[1920px] m-auto px-40;
+  }
+}
+
 @font-face {
   font-family: Helvetica;
   src: url("../public/fonts/HelveticaNeueMediumExtended.otf");
