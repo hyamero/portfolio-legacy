@@ -4,7 +4,19 @@
 
 @layer components {
   .container {
-    @apply max-w-[1920px] m-auto px-40;
+    @apply max-w-[1920px] m-auto px-[200px];
+  }
+
+  .header-text {
+    @apply font-Sprat font-medium text-ylw-100 whitespace-nowrap leading-none;
+  }
+
+  .header-text span {
+    @apply font-semibold text-ylw-200;
+  }
+
+  .sub-text {
+    @apply text-sub whitespace-nowrap font-Helvetica;
   }
 }
 
