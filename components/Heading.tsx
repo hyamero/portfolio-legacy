@@ -15,7 +15,7 @@ export const Heading: React.FC<HeadingProps> = ({}) => {
           <br />
           &nbsp; &nbsp; WEBSITES
         </div>
-        <p className="text-sub whitespace-nowrap font-Helvetica absolute bottom-0 right-[5rem]">
+        <p className="text-sub whitespace-nowrap font-helvetica absolute bottom-0 right-[6rem]">
           FRONT-END DEVELOPER <br /> AND UI/UX DESIGNER, <br /> FULL-STACK
           CAPABLE
         </p>
