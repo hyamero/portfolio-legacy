@@ -22,7 +22,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     document.body.style.height = `${
       scrollContainer.current?.getBoundingClientRect().height
     }px`;
-  }, [size.height]);
+  }, [size?.height]);
 
   useEffect(() => {
     requestAnimationFrame(() => skewScrolling());
@@ -36,7 +36,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
     //variables
     const difference = skewConfigs.current - skewConfigs.rounded;
-    const acceleration = difference / size.width;
+    const acceleration = difference / size!.width;
     const velocity = +acceleration;
     const skew = velocity * 7.5;
 
@@ -50,10 +50,13 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       ref={layout}
       className="fixed top-0 left-0 h-[100%] w-[100%] overflow-hidden"
     >
-      <div ref={scrollContainer} className="pointer-events-none ">
-        <Navbar />
-        <main className="max-w-[1920px]">{children}</main>
-      </div>
+      <Navbar />
+      <main
+        ref={scrollContainer}
+        className="pointer-events-none max-w-[1920px]"
+      >
+        {children}
+      </main>
     </div>
   );
 };
