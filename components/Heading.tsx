@@ -30,7 +30,7 @@ const Heading: React.FC<HeadingProps> = ({}) => {
         <p className="sub-text mr-auto absolute top-[-1rem] left-[3rem]">
           HI, I'M DALE BAÑARES
         </p>
-        <div className="header-text text-[6rem] inline-block relative">
+        <div className="header-text text-[6rem] inline-block relative z-30">
           &nbsp; I <span>DESIGN</span> AND
           <br /> DEVELOP <span>ELEGANT</span>
           <br />

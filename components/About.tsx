@@ -7,7 +7,7 @@ interface EmptyProps {}
 
 export const About: React.FC<EmptyProps> = ({}) => {
   return (
-    <div className="h-screen bg-dark font-helvetica container relative">
+    <div className="h-screen bg-dark font-helvetica container relative overflow-y-hidden">
       <h4 className="text-light text-center pt-20 pb-14 border-b-[1px] border-[#353535] w-[80%] mx-[auto]">
         ABOUT
       </h4>

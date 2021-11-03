@@ -51,6 +51,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       className="fixed top-0 left-0 h-[100%] w-[100%] overflow-hidden"
     >
       <Navbar />
+      <div className="filled-text z-[-1]"></div>
+      <div className="stroke-text z-[1]"></div>
       <main
         ref={scrollContainer}
         className="pointer-events-none max-w-[1920px]"
