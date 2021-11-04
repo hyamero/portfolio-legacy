@@ -6,8 +6,7 @@ interface ProjectsProps {}
 
 export const Projects: React.FC<ProjectsProps> = ({}) => {
   return (
-    <section className="bg-transparent h-[200vh]">
-      <img src={test.src} alt="Projects text" className="sticky" />
+    <section className="bg-transparent min-h-[200vh]">
       <span>lol</span>
     </section>
   );
