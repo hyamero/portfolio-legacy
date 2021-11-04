@@ -91,6 +91,12 @@ body {
 }
 
 @font-face {
+  font-family: druk;
+  src: url("../public/fonts/Druk-Wide-Bold.otf");
+  font-weight: bold;
+}
+
+@font-face {
   font-family: sprat;
   src: url("../public/fonts/Sprat-RegularMedium.otf");
   font-weight: 500;

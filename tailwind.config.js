@@ -17,6 +17,7 @@ module.exports = {
       fontFamily: {
         helvetica: ["helvetica"],
         sprat: ["sprat"],
+        druk: ["druk"],
       },
     },
   },
