@@ -21,6 +21,14 @@
     @apply text-sub whitespace-nowrap font-helvetica;
   }
 
+  .tech-text {
+    @apply flex justify-between space-x-20 text-6xl uppercase whitespace-nowrap;
+  }
+
+  .borderline {
+    @apply text-light border-b-[1px] border-[#353535] text-center;
+  }
+
   .nav-btns a {
     background-image: linear-gradient(#ffb64b, #f59e1c);
     background-size: 0% 2px;

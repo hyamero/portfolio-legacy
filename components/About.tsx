@@ -37,9 +37,9 @@ interface AboutProps {}
 
 export const About: React.FC<AboutProps> = ({}) => {
   return (
-    <section className="min-h-[130vh] bg-dark font-helvetica relative overflow-y-hidden">
+    <section className="min-h-[130vh] bg-dark font-helvetica relative overflow-hidden">
       <div className="container">
-        <h4 className="text-light text-center w-[80%] mx-[auto] pt-20 pb-14 border-b-[1px] border-[#353535] tracking-wider">
+        <h4 className="borderline w-[80%] mx-[auto] pt-20 pb-14 tracking-wider">
           ABOUT
         </h4>
         <p className="text-ylw-100 text-md text-center w-[70%] mx-auto mt-14 mb-40">
@@ -49,29 +49,33 @@ export const About: React.FC<AboutProps> = ({}) => {
           DESIGNER AND A FULL STACK WEB DEVELOPER. I AM A REACT.JS ENTHUSIAST
           AND I LIKE TO CREATE ELEGANT, RESPONSIVE WEBSITES.{" "}
         </p>
-        <div className="text-light py-14 my-20 border-t-[1px] border-b-[1px] border-[#353535] text-center">
+        <div className="borderline py-14 my-20 border-t-[1px]">
           TECHNOLOGIES I USE
         </div>
       </div>
 
-      <motion.div
-        variants={marqueeVariants}
-        animate="animate"
-        exit={{ opacity: 0 }}
-        className="flex justify-between space-x-20 text-6xl uppercase whitespace-nowrap font-druk"
-      >
+      <motion.div className="tech-text font-druk">
         {codeTechs.map((tech: any) => (
-          <div className="text-light">{tech}</div>
+          <motion.div
+            variants={marqueeVariants}
+            animate="animate"
+            exit={{ opacity: 0 }}
+            className="text-light"
+          >
+            {tech}
+          </motion.div>
         ))}
       </motion.div>
 
-      <motion.div
-        variants={marqueeVariantsSlow}
-        animate="animate"
-        className="flex justify-between space-x-20 text-6xl uppercase whitespace-nowrap font-druk mb-30"
-      >
+      <motion.div className="tech-text font-druk mb-30">
         {designTechs.map((tech: any) => (
-          <div className="text-light">{tech}</div>
+          <motion.div
+            variants={marqueeVariantsSlow}
+            animate="animate"
+            className="text-light"
+          >
+            {tech}
+          </motion.div>
         ))}
       </motion.div>
     </section>
