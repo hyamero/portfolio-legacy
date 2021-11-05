@@ -1,6 +1,37 @@
 import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { codeTechs, designTechs } from "../utilities/techs";
+
+const marqueeVariants = {
+  animate: {
+    x: [0, -1035],
+    opacity: 1,
+    transition: {
+      x: {
+        repeat: Infinity,
+        repeatType: "loop",
+        duration: 5,
+        ease: "linear",
+      },
+    },
+  },
+};
+
+const marqueeVariantsSlow = {
+  animate: {
+    x: [0, -900],
+    opacity: 1,
+    transition: {
+      x: {
+        repeat: Infinity,
+        repeatType: "loop",
+        duration: 5,
+        ease: "linear",
+      },
+    },
+  },
+};
 
 interface AboutProps {}
 
@@ -23,17 +54,26 @@ export const About: React.FC<AboutProps> = ({}) => {
         </div>
       </div>
 
-      <div className="flex  justify-between space-x-20 text-6xl uppercase font-druk">
+      <motion.div
+        variants={marqueeVariants}
+        animate="animate"
+        exit={{ opacity: 0 }}
+        className="flex justify-between space-x-20 text-6xl uppercase whitespace-nowrap font-druk"
+      >
         {codeTechs.map((tech: any) => (
           <div className="text-light">{tech}</div>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="flex justify-between text-6xl uppercase font-helvetica mb-30">
+      <motion.div
+        variants={marqueeVariantsSlow}
+        animate="animate"
+        className="flex justify-between space-x-20 text-6xl uppercase whitespace-nowrap font-druk mb-30"
+      >
         {designTechs.map((tech: any) => (
           <div className="text-light">{tech}</div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
