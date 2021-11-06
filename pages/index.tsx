@@ -1,10 +1,11 @@
+import React, { useEffect, useRef } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
 import Heading from "../components/Heading";
 import { About } from "../components/About";
 import { Projects } from "../components/Projects";
-import React, { useEffect, useRef } from "react";
+import { Footer } from "../components/Footer";
 
 import useWindowSize from "../hooks/useWindowSize";
 
@@ -60,6 +61,7 @@ const Home: NextPage = () => {
         <Heading />
         <About />
         <Projects />
+        <Footer />
       </main>
     </div>
   );
