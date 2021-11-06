@@ -6,10 +6,7 @@ import { About } from "../components/About";
 import { Projects } from "../components/Projects";
 import React, { useEffect, useRef } from "react";
 
-import test from "../public/img/daleb.jpg";
-
 import useWindowSize from "../hooks/useWindowSize";
-import { ProjectsImg } from "../components/ProjectsImg";
 
 const Home: NextPage = () => {
   const size = useWindowSize();
