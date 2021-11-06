@@ -28,46 +28,46 @@
   .borderline {
     @apply text-light border-b-[1px] border-[#353535] text-center;
   }
+}
 
-  .nav-btns a {
-    background-image: linear-gradient(#ffb64b, #f59e1c);
-    background-size: 0% 2px;
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    transition: background-size 0.3s ease;
-  }
+.nav-btns a {
+  background-image: linear-gradient(#ffb64b, #f59e1c);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease;
+}
 
-  .nav-btns a:hover {
-    background-size: 100% 2px;
-  }
+.nav-btns a:hover {
+  background-size: 100% 2px;
+}
 
-  .filled-text {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.filled-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-    background-image: url("../public/img/PROJECTSfilled.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    pointer-events: none;
-  }
+  background-image: url("../public/img/PROJECTSfilled.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  pointer-events: none;
+}
 
-  .stroke-text {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.stroke-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-    background-image: url("../public/img/PROJECTSstroke.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    pointer-events: none;
-  }
+  background-image: url("../public/img/PROJECTSstroke.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  pointer-events: none;
 }
 
 body {

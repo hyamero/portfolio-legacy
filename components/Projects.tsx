@@ -5,9 +5,5 @@ import test from "../public/img/daleb.jpg";
 interface ProjectsProps {}
 
 export const Projects: React.FC<ProjectsProps> = ({}) => {
-  return (
-    <section className="bg-transparent min-h-[200vh]">
-      <span>lol</span>
-    </section>
-  );
+  return <section className="bg-transparent min-h-[200vh]"></section>;
 };

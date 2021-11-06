@@ -1,4 +1,4 @@
-export const codeTechs: any = [
+export const codeTechs: string[] = [
     "react",
     "typscript",
     "tailwind",
@@ -7,7 +7,7 @@ export const codeTechs: any = [
     "tailwind"
 ]
 
-export const designTechs: any = [
+export const designTechs: string[] = [
     "figma",
     "photoshop",
     "premiere pro",

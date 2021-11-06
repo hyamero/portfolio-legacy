@@ -63,7 +63,6 @@ const Home: NextPage = () => {
         <Heading />
         <About />
         <Projects />
-        <ProjectsImg />
       </main>
     </div>
   );
