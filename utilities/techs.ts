@@ -1,17 +1,27 @@
 export const codeTechs: string[] = [
+    " ",
     "react",
     "typscript",
     "tailwind",
     "react",
     "typscript",
-    "tailwind"
+    "tailwind",
+    "react",
+    "typscript",
+    "tailwind",
+    " "
 ]
 
 export const designTechs: string[] = [
+    " ",
     "figma",
     "photoshop",
     "premiere pro",
     "figma",
     "photoshop",
-    "premiere pro"
+    "premiere pro",
+    "figma",
+    "photoshop",
+    "premiere pro",
+    " ",
 ]

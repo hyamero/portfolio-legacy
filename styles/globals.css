@@ -22,7 +22,7 @@
   }
 
   .tech-text {
-    @apply flex justify-between space-x-20 text-6xl uppercase whitespace-nowrap;
+    @apply flex justify-between space-x-20 text-6xl text-light uppercase whitespace-nowrap;
   }
 
   .borderline {

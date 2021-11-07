@@ -1,37 +1,6 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 import { codeTechs, designTechs } from "../utilities/techs";
-
-const marqueeVariants = {
-  animate: {
-    x: [0, -1035],
-    opacity: 1,
-    transition: {
-      x: {
-        repeat: Infinity,
-        repeatType: "reverse",
-        duration: 5,
-        ease: "linear",
-      },
-    },
-  },
-};
-
-const marqueeVariantsSlow = {
-  animate: {
-    x: [0, -900],
-    opacity: 1,
-    transition: {
-      x: {
-        repeat: Infinity,
-        repeatType: "reverse",
-        duration: 5,
-        ease: "linear",
-      },
-    },
-  },
-};
 
 interface AboutProps {}
 
@@ -50,32 +19,39 @@ export const About: React.FC<AboutProps> = ({}) => {
           AND I LIKE TO CREATE ELEGANT, RESPONSIVE WEBSITES.{" "}
         </p>
       </div>
+
       <div className="borderline py-14 my-20 border-t-[1px]">
         TECHNOLOGIES I USE
       </div>
 
-      <div className="tech-text font-druk">
-        {codeTechs.map((tech: any) => (
-          <motion.div
-            variants={marqueeVariants}
-            animate="animate"
-            className="text-light"
-          >
-            {tech}
-          </motion.div>
-        ))}
+      {/* MARQUEE codeTechs*/}
+      <div className="flex">
+        <div className="marquee flex space-x-20 mx-[5rem]">
+          {codeTechs.map((tech: any) => (
+            <div className="tech-text font-druk">{tech}</div>
+          ))}
+        </div>
+
+        <div className="marquee2 flex space-x-20">
+          {codeTechs.map((tech: any) => (
+            <div className="tech-text font-druk">{tech}</div>
+          ))}
+        </div>
       </div>
 
-      <div className="tech-text font-druk mb-30">
-        {designTechs.map((tech: any) => (
-          <motion.div
-            variants={marqueeVariantsSlow}
-            animate="animate"
-            className="text-light"
-          >
-            {tech}
-          </motion.div>
-        ))}
+      {/* MARQUEE designTechs*/}
+      <div className="flex">
+        <div className="marqueeR flex space-x-20 mx-[5rem]">
+          {designTechs.map((tech: any) => (
+            <div className="tech-text font-druk text-ylw-100">{tech}</div>
+          ))}
+        </div>
+
+        <div className="marqueeR2 flex space-x-20">
+          {designTechs.map((tech: any) => (
+            <div className="tech-text font-druk text-ylw-100">{tech}</div>
+          ))}
+        </div>
       </div>
     </section>
   );
