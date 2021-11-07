@@ -4,7 +4,7 @@ interface NavbarProps {}
 
 export const Navbar: React.FC<NavbarProps> = ({}) => {
   return (
-    <nav className="fixed top-0 w-screen mt-12 max-w-[1920px] m-auto px-20 z-10">
+    <nav className="container fixed top-0 center w-screen mt-12 mx-auto px-20 z-10">
       <div className="font-helvetica text-light flex justify-between">
         <h3>DALE B.</h3>
         <ul className="text-xs tracking-wider nav-btns">

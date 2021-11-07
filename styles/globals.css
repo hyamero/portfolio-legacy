@@ -30,6 +30,11 @@
   }
 }
 
+.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .nav-btns a {
   background-image: linear-gradient(#ffb64b, #f59e1c);
   background-size: 0% 2px;

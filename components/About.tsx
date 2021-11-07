@@ -10,7 +10,7 @@ const marqueeVariants = {
     transition: {
       x: {
         repeat: Infinity,
-        repeatType: "loop",
+        repeatType: "reverse",
         duration: 5,
         ease: "linear",
       },
@@ -25,7 +25,7 @@ const marqueeVariantsSlow = {
     transition: {
       x: {
         repeat: Infinity,
-        repeatType: "loop",
+        repeatType: "reverse",
         duration: 5,
         ease: "linear",
       },
@@ -37,37 +37,36 @@ interface AboutProps {}
 
 export const About: React.FC<AboutProps> = ({}) => {
   return (
-    <section className="min-h-[130vh] bg-dark font-helvetica relative overflow-hidden">
+    <section className="container min-h-[130vh] bg-dark font-helvetica relative overflow-hidden">
       <div className="container">
         <h4 className="borderline w-[80%] mx-[auto] pt-20 pb-14 tracking-wider">
           ABOUT
         </h4>
-        <p className="text-ylw-100 text-md text-center w-[70%] mx-auto mt-14 mb-40">
+        <p className="text-ylw-100 text-md text-center w-[100%] mx-auto mt-14 mb-40">
           MY NAME IS{" "}
           <span className="font-druk tracking-widest">JOSEPH DALE BAÑARES</span>{" "}
           AND I’M A WEB DEVELOPER BASED IN THE PHILIPPINES. I AM A UI/UX
           DESIGNER AND A FULL STACK WEB DEVELOPER. I AM A REACT.JS ENTHUSIAST
           AND I LIKE TO CREATE ELEGANT, RESPONSIVE WEBSITES.{" "}
         </p>
-        <div className="borderline py-14 my-20 border-t-[1px]">
-          TECHNOLOGIES I USE
-        </div>
+      </div>
+      <div className="borderline py-14 my-20 border-t-[1px]">
+        TECHNOLOGIES I USE
       </div>
 
-      <motion.div className="tech-text font-druk">
+      <div className="tech-text font-druk">
         {codeTechs.map((tech: any) => (
           <motion.div
             variants={marqueeVariants}
             animate="animate"
-            exit={{ opacity: 0 }}
             className="text-light"
           >
             {tech}
           </motion.div>
         ))}
-      </motion.div>
+      </div>
 
-      <motion.div className="tech-text font-druk mb-30">
+      <div className="tech-text font-druk mb-30">
         {designTechs.map((tech: any) => (
           <motion.div
             variants={marqueeVariantsSlow}
@@ -77,7 +76,7 @@ export const About: React.FC<AboutProps> = ({}) => {
             {tech}
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 };
