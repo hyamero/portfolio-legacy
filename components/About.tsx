@@ -26,30 +26,38 @@ export const About: React.FC<AboutProps> = ({}) => {
 
       {/* MARQUEE codeTechs*/}
       <div className="flex">
-        <div className="marquee flex space-x-20 mx-[5rem]">
-          {codeTechs.map((tech: any) => (
-            <div className="tech-text font-druk">{tech}</div>
+        <div className="marquee flex space-x-20">
+          {codeTechs.map((tech: any, i: number) => (
+            <div key={i} className="tech-text font-druk">
+              {tech}
+            </div>
           ))}
         </div>
 
         <div className="marquee2 flex space-x-20">
-          {codeTechs.map((tech: any) => (
-            <div className="tech-text font-druk">{tech}</div>
+          {codeTechs.map((tech: any, i: number) => (
+            <div key={i} className="tech-text font-druk">
+              {tech}
+            </div>
           ))}
         </div>
       </div>
 
       {/* MARQUEE designTechs*/}
       <div className="flex">
-        <div className="marqueeR flex space-x-20 mx-[5rem]">
-          {designTechs.map((tech: any) => (
-            <div className="tech-text font-druk text-ylw-100">{tech}</div>
+        <div className="marqueeR flex space-x-20">
+          {designTechs.map((tech: any, i: number) => (
+            <div key={i} className="tech-text font-druk">
+              {tech}
+            </div>
           ))}
         </div>
 
         <div className="marqueeR2 flex space-x-20">
-          {designTechs.map((tech: any) => (
-            <div className="tech-text font-druk text-ylw-100">{tech}</div>
+          {designTechs.map((tech: any, i: number) => (
+            <div key={i} className="tech-text font-druk">
+              {tech}
+            </div>
           ))}
         </div>
       </div>

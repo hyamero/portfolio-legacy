@@ -26,6 +26,7 @@
   }
 }
 
+/* Reverse Marquee */
 .marqueeR {
   animation: marqueeR 100s linear infinite;
   animation-delay: -100s;
