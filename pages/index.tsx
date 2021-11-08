@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -48,40 +48,6 @@ const Home: NextPage = () => {
 
     requestAnimationFrame(() => skewScrolling());
   };
-
-  // Scroll detection
-  const [scrollDown, setScrollDown] = useState<boolean>(false);
-  const [scrollUp, setScrollUp] = useState<boolean>(false);
-
-  const [scroll, setScroll] = useState<boolean>(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 50);
-    });
-  }, []);
-
-  //Scroll Down
-  const endRef = useRef<HTMLDivElement>(null);
-
-  const scrollToBottom = () => {
-    endRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    if (scrollDown || !scrollDown) scrollToBottom();
-  }, [scrollDown]);
-
-  //Scroll Up
-  const startRef = useRef<HTMLDivElement>(null);
-
-  const scrollToTop = () => {
-    startRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    if (scrollUp || !scrollUp) scrollToTop();
-  }, [scrollUp]);
 
   return (
     <div ref={layout} className="fixed top-0 left-0 h-[100%] w-[100%]">
