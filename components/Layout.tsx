@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { Navbar } from "./Navbar";
 import test from "../public/img/daleb.jpg";
 
