@@ -6,7 +6,10 @@ interface AboutProps {}
 
 export const About: React.FC<AboutProps> = ({}) => {
   return (
-    <section className="max-w-[1920px] mx-auto min-h-screen bg-dark font-helvetica relative overflow-hidden">
+    <section
+      id="about"
+      className="max-w-[1920px] mx-auto min-h-screen bg-dark font-helvetica relative overflow-hidden"
+    >
       <div className="container">
         <h4 className="borderline w-[100%] mx-[auto] pt-20 pb-14 tracking-wider">
           ABOUT

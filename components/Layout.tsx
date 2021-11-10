@@ -1,6 +1,5 @@
 import React from "react";
 import { Navbar } from "./Navbar";
-import test from "../public/img/daleb.jpg";
 
 interface LayoutProps {}
 

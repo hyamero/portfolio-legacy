@@ -30,6 +30,12 @@
   }
 }
 
+.text-outline {
+  color: #fff;
+  text-shadow: #000 0px 0px 1px;
+  -webkit-font-smoothing: antialiased;
+}
+
 .center {
   left: 50%;
   transform: translateX(-50%);
