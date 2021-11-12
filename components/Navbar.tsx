@@ -1,6 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const slideDown = {
+  hidden: {},
+};
+
 interface NavbarProps {}
 
 export const Navbar: React.FC<NavbarProps> = ({}) => {
@@ -45,7 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
     <AnimatePresence initial={false}>
       <nav className="container fixed top-0 center w-screen mt-12 mx-auto px-20 z-10">
         <div className="font-helvetica text-light flex justify-between">
-          <h3 className="text-outline">DALE B.</h3>
+          <h3>DALE B.</h3>
           {!scroll && (
             <motion.ul
               initial={{ opacity: 0, y: 60 }}
@@ -73,19 +77,27 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
                 </motion.button>
               )}
               {isOpen && (
-                <ul
+                <motion.ul
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ ease: "easeOut", duration: 0.3 }}
                   onMouseLeave={() => setIsOpen(false)}
-                  className="text-xs tracking-wider nav-btns bg-dark px-10 py-10 rounded-3xl text-left"
+                  className="text-xs tracking-wider nav-btns bg-dark px-10 py-10 rounded-3xl text-center fixed right-[2.5rem] top-0"
                 >
-                  <button
+                  <motion.button
                     onMouseEnter={() => setIsOpen(true)}
                     onClick={() => setIsOpen(!isOpen)}
-                    className="bg-dark rounded-3xl text-sm mb-5 text-center"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ ease: "easeOut", duration: 0.3 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="bg-dark rounded-3xl text-sm mb-5 text-center mx-auto"
                   >
                     MENU
-                  </button>
+                  </motion.button>
                   <NavBtns />
-                </ul>
+                </motion.ul>
               )}
             </>
           )}{" "}
@@ -95,21 +107,28 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
   );
 };
 
+const navChildren = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const navText = ["home", "about", "projects", "contact"];
+
 const NavBtns: React.FC = ({}) => {
   return (
-    <>
-      <li>
-        <a href="">HOME</a>
-      </li>
-      <li>
-        <a href="">ABOUT</a>
-      </li>
-      <li>
-        <a href="">PROJECTS</a>
-      </li>
-      <li>
-        <a href="">CONTACT</a>
-      </li>
-    </>
+    <div className="text-left">
+      {navText.map((text, i) => (
+        <motion.li
+          variants={navChildren}
+          initial="hidden"
+          animate="visible"
+          transition={{ ease: "easeOut", duration: 0.3, delay: i * 0.1 }}
+        >
+          <a href={`#${text}`} className="uppercase">
+            {text}
+          </a>
+        </motion.li>
+      ))}
+    </div>
   );
 };
