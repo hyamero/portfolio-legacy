@@ -1,6 +1,6 @@
 .marquee {
-  animation: marquee 100s linear infinite;
-  animation-delay: -100s;
+  animation: marquee 220s linear infinite;
+  animation-delay: -220s;
 }
 
 @keyframes marquee {
@@ -13,8 +13,8 @@
 }
 
 .marquee2 {
-  animation: marquee2 100s linear infinite;
-  animation-delay: -50s;
+  animation: marquee2 220s linear infinite;
+  animation-delay: -110s;
 }
 
 @keyframes marquee2 {
@@ -28,8 +28,8 @@
 
 /* Reverse Marquee */
 .marqueeR {
-  animation: marqueeR 100s linear infinite;
-  animation-delay: -100s;
+  animation: marqueeR 220s linear infinite;
+  animation-delay: -220s;
 }
 
 @keyframes marqueeR {
@@ -42,8 +42,8 @@
 }
 
 .marqueeR2 {
-  animation: marqueeR2 100s linear infinite;
-  animation-delay: -50s;
+  animation: marqueeR2 220s linear infinite;
+  animation-delay: -110s;
 }
 
 @keyframes marqueeR2 {
