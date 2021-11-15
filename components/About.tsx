@@ -1,12 +1,16 @@
 import React from "react";
+import { useGlobal } from "../utilities/GlobalContext";
 
 import { Marquee } from "./Marquee";
 
 interface AboutProps {}
 
 export const About: React.FC<AboutProps> = ({}) => {
+  const { aboutRef } = useGlobal();
+
   return (
-    <section
+    <div
+      ref={aboutRef}
       id="about"
       className="max-w-[1920px] mx-auto min-h-screen bg-dark font-helvetica relative overflow-hidden"
     >
@@ -23,6 +27,6 @@ export const About: React.FC<AboutProps> = ({}) => {
         </p>
       </div>
       <Marquee />
-    </section>
+    </div>
   );
 };

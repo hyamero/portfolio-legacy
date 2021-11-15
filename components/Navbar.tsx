@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useGlobal } from "../utilities/GlobalContext";
 
 const slideDown = {
   hidden: {},
@@ -51,15 +52,9 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
         <div className="font-helvetica text-light flex justify-between">
           <h3>DALE B.</h3>
           {!scroll && (
-            <motion.ul
-              initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ ease: "easeOut", duration: 0.3 }}
-              exit={{ opacity: 0, y: 20 }}
-              className="text-xs tracking-wider nav-btns"
-            >
+            <ul className="text-xs tracking-wider nav-btns">
               <NavBtns />
-            </motion.ul>
+            </ul>
           )}
           {scroll && (
             <>
@@ -115,6 +110,12 @@ const navChildren = {
 const navText = ["home", "about", "projects", "contact"];
 
 const NavBtns: React.FC = ({}) => {
+  const { aboutRef } = useGlobal();
+
+  const scrollToAbout = () => {
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="text-left">
       {navText.map((text, i) => (
@@ -123,8 +124,12 @@ const NavBtns: React.FC = ({}) => {
           initial="hidden"
           animate="visible"
           transition={{ ease: "easeOut", duration: 0.3, delay: i * 0.1 }}
+          key={i}
         >
-          <a href={`#${text}`} className="uppercase">
+          <a
+            onClick={() => scrollToAbout()}
+            className="uppercase cursor-pointer"
+          >
             {text}
           </a>
         </motion.li>
