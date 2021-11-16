@@ -292,6 +292,11 @@
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
+"@types/scrollreveal@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@types/scrollreveal/-/scrollreveal-0.0.7.tgz#cca18ca13093fc0c9b5ba6defed7374e6189196a"
+  integrity sha512-Bv/cBFpJE+WTUOViqT7y29n7Vpp+KAGF/UUx4DZx7JwAfHarBl/xGytum1+xMZBRjANcHHfDM9+7LQGilEj2gQ==
+
 "@typescript-eslint/parser@^4.20.0":
   version "4.33.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-4.33.0.tgz#dfe797570d9694e560528d18eecad86c8c744899"

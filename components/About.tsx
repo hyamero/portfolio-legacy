@@ -18,7 +18,7 @@ export const About: React.FC<AboutProps> = ({}) => {
         <h4 className="borderline w-[100%] mx-[auto] pt-20 pb-14 tracking-wider">
           ABOUT
         </h4>
-        <p className="text-ylw-100 text-md text-center w-[80%] mx-auto mt-14 mb-40">
+        <p className="sub-text whitespace-normal text-ylw-100 text-md text-center w-[80%] mx-auto mt-14 mb-40">
           MY NAME IS{" "}
           <span className="font-druk tracking-widest">JOSEPH DALE BAÑARES</span>{" "}
           AND I’M A WEB DEVELOPER BASED IN THE PHILIPPINES. I AM A UI/UX

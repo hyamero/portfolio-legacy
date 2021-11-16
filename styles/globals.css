@@ -4,7 +4,7 @@
 
 @layer components {
   .container {
-    @apply max-w-[1920px] m-auto px-[200px];
+    @apply max-w-[1920px] m-auto px-[200px] lg:p-0;
   }
 
   .header-text {
@@ -19,6 +19,7 @@
 
   .sub-text {
     @apply text-sub whitespace-nowrap font-helvetica;
+    font-size: clamp(0.1rem, 2vw, 1rem);
   }
 
   .tech-text {
@@ -28,6 +29,10 @@
   .borderline {
     @apply text-light border-b-[1px] border-[#353535] text-center;
   }
+}
+
+.text-clamp {
+  font-size: clamp(2rem, 8vw, 6rem);
 }
 
 .text-outline {
