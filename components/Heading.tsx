@@ -40,7 +40,7 @@ const Heading: React.FC<HeadingProps> = ({}) => {
           <br />
           &nbsp; &nbsp; WEBSITES
         </motion.div>
-        <p className="sub-text whitespace-nowrap font-helvetica absolute bottom-0 right-[6rem] sub-sentence md:right-[-1.5rem] md:-bottom-3">
+        <p className="sub-text whitespace-nowrap font-helvetica absolute bottom-0 right-[6rem] sub-sentence md:right-0 md:-bottom-3 xs:-right-5 xs:text-[1px]">
           FRONT-END DEVELOPER <br /> AND UI/UX DESIGNER, <br /> FULL-STACK
           CAPABLE
         </p>

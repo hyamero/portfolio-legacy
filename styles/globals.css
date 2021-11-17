@@ -89,7 +89,7 @@
 
 @media (max-width: 1070px) {
   .sub-sentence {
-    right: 0;
+    right: 1.3rem;
     bottom: -0.5rem;
   }
 }
