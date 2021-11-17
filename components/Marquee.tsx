@@ -13,7 +13,7 @@ export const Marquee: React.FC<MarqueeProps> = ({}) => {
       <div className="mb-20">
         {/* MARQUEE codeTechs*/}
         <div className="flex">
-          <div className="marquee flex space-x-20">
+          <div className="marquee flex space-x-20 md:space-x-10">
             {codeTechs.map((tech: any, i: number) => (
               <div key={i} className="tech-text font-druk">
                 {tech}
@@ -21,7 +21,7 @@ export const Marquee: React.FC<MarqueeProps> = ({}) => {
             ))}
           </div>
 
-          <div className="marquee2 flex space-x-20">
+          <div className="marquee2 flex space-x-20 md:space-x-10">
             {codeTechs.map((tech: any, i: number) => (
               <div key={i} className="tech-text font-druk">
                 {tech}
@@ -32,7 +32,7 @@ export const Marquee: React.FC<MarqueeProps> = ({}) => {
 
         {/* MARQUEE designTechs*/}
         <div className="flex">
-          <div className="marqueeR flex space-x-20">
+          <div className="marqueeR flex space-x-20 md:space-x-10">
             {designTechs.map((tech: any, i: number) => (
               <div key={i} className="tech-text font-druk text-ylw-100">
                 {tech}
@@ -40,7 +40,7 @@ export const Marquee: React.FC<MarqueeProps> = ({}) => {
             ))}
           </div>
 
-          <div className="marqueeR2 flex space-x-20">
+          <div className="marqueeR2 flex space-x-20 md:space-x-10">
             {designTechs.map((tech: any, i: number) => (
               <div key={i} className="tech-text font-druk text-ylw-100">
                 {tech}

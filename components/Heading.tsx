@@ -27,10 +27,7 @@ const Heading: React.FC<HeadingProps> = ({}) => {
   return (
     <header className="container h-screen bg-dark flex flex-col justify-center items-center">
       <div className="relative">
-        <p
-          data-speed="5"
-          className="layer sub-text mr-auto absolute top-[-1rem] left-[3rem] overflow-hidden md:left-[2rem]"
-        >
+        <p className="layer sub-text mr-auto absolute top-[-1rem] left-[3rem] overflow-hidden md:left-[2rem] md:top-[-0.6rem]">
           HI, I&apos;M DALE BAÑARES
         </p>
         <motion.div className="text-clamp header-text inline-block relative">
@@ -43,7 +40,7 @@ const Heading: React.FC<HeadingProps> = ({}) => {
           <br />
           &nbsp; &nbsp; WEBSITES
         </motion.div>
-        <p className="sub-text whitespace-nowrap font-helvetica absolute bottom-0 right-[6rem]">
+        <p className="sub-text whitespace-nowrap font-helvetica absolute bottom-0 right-[6rem] sub-sentence md:right-[-1.5rem] md:-bottom-3">
           FRONT-END DEVELOPER <br /> AND UI/UX DESIGNER, <br /> FULL-STACK
           CAPABLE
         </p>

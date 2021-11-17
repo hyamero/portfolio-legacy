@@ -19,11 +19,12 @@
 
   .sub-text {
     @apply text-sub whitespace-nowrap font-helvetica;
-    font-size: clamp(0.1rem, 2vw, 1rem);
+    font-size: clamp(0.01rem, 2vw, 1rem);
   }
 
   .tech-text {
-    @apply flex justify-between space-x-20 text-6xl text-light uppercase whitespace-nowrap;
+    @apply flex justify-between text-light uppercase whitespace-nowrap;
+    font-size: clamp(1.5rem, 4vw, 3.75rem);
   }
 
   .borderline {
@@ -86,8 +87,11 @@
   pointer-events: none;
 }
 
-body {
-  background: #f0f0f0;
+@media (max-width: 1070px) {
+  .sub-sentence {
+    right: 0;
+    bottom: -0.5rem;
+  }
 }
 
 ::selection {
