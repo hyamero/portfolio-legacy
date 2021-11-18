@@ -12,7 +12,7 @@ export const About: React.FC<AboutProps> = ({}) => {
     <div
       ref={aboutRef}
       id="about"
-      className="max-w-[1920px] mx-auto min-h-screen bg-dark font-helvetica relative overflow-hidden"
+      className="max-w-[1920px] mx-auto min-h-screen bg-dark font-helvetica relative overflow-hidden flex flex-col"
     >
       <div className="container">
         <h4 className="borderline w-[100%] mx-[auto] pt-20 pb-14 tracking-wider">

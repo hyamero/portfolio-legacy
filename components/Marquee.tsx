@@ -6,10 +6,6 @@ interface MarqueeProps {}
 export const Marquee: React.FC<MarqueeProps> = ({}) => {
   return (
     <div className="max-w-[1920px]">
-      <div className="borderline py-14 my-20 border-t-[1px] w-[90%] mx-auto">
-        TECHNOLOGIES I USE
-      </div>
-
       <div className="mb-20">
         {/* MARQUEE codeTechs*/}
         <div className="flex">

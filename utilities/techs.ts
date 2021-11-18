@@ -4,11 +4,14 @@ export const codeTechs: string[] = [
     "typscript",
     "tailwind",
     "react",
+    "next.js",
     "typscript",
     "tailwind",
     "react",
+    "next.js",
     "typscript",
     "tailwind",
+    "next.js",
     " "
 ]
 

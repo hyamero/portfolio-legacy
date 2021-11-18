@@ -61,10 +61,11 @@
 
 .filled-text {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  right: 50%;
   width: 100%;
   height: 100%;
+  transform: translate(50%, -50%);
 
   background-image: url("../public/img/PROJECTSfilled.svg");
   background-repeat: no-repeat;
@@ -73,7 +74,7 @@
   pointer-events: none;
 }
 
-.stroke-text {
+/* .stroke-text {
   position: fixed;
   top: 0;
   left: 0;
@@ -85,7 +86,7 @@
   background-position: center center;
   background-size: contain;
   pointer-events: none;
-}
+} */
 
 @media (max-width: 1070px) {
   .sub-sentence {
