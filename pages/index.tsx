@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -17,13 +17,6 @@ const Home: NextPage = () => {
   const layout = useRef<HTMLDivElement>(null);
   const scrollContainer = useRef<HTMLDivElement>(null);
 
-  // let ref
-  // const refValue = () => {
-  //   if (!isMobile) {
-  //     ref = 'scrollContainer'
-  //   }
-  // }
-
   const skewConfigs = {
     ease: 0.1,
     current: 0,
@@ -32,30 +25,42 @@ const Home: NextPage = () => {
   };
 
   useEffect(() => {
-    document.body.style.height = `${
-      scrollContainer.current?.getBoundingClientRect().height
-    }px`;
+    if (!isMobile) {
+      document.body.style.height = `${
+        scrollContainer.current?.getBoundingClientRect().height
+      }px`;
+    }
   }, [size?.height]);
 
   useEffect(() => {
-    requestAnimationFrame(() => skewScrolling());
+    requestAnimationFrame(() => {
+      if (!isMobile) {
+        skewScrolling();
+      } else {
+        null;
+      }
+    });
   }, []);
 
   const skewScrolling = () => {
-    skewConfigs.current = window.scrollY;
-    skewConfigs.previous +=
-      (skewConfigs.current - skewConfigs.previous) * skewConfigs.ease;
-    skewConfigs.rounded = Math.round(skewConfigs.previous * 100) / 100;
+    if (!isMobile) {
+      skewConfigs.current = window.scrollY;
+      skewConfigs.previous +=
+        (skewConfigs.current - skewConfigs.previous) * skewConfigs.ease;
+      skewConfigs.rounded = Math.round(skewConfigs.previous * 100) / 100;
 
-    //variables
-    const difference = skewConfigs.current - skewConfigs.rounded;
-    const acceleration = difference / size!.width;
-    const velocity = +acceleration;
-    const skew = velocity * 7.5;
+      //variables
+      const difference = skewConfigs.current - skewConfigs.rounded;
+      const acceleration = difference / size!.width;
+      const velocity = +acceleration;
+      const skew = velocity * 7.5;
 
-    scrollContainer.current!.style.transform = `translate3d(0, -${skewConfigs.rounded}px, 0) skewY(${skew}deg)`;
+      scrollContainer.current!.style.transform = `translate3d(0, -${skewConfigs.rounded}px, 0) skewY(${skew}deg)`;
 
-    requestAnimationFrame(() => skewScrolling());
+      requestAnimationFrame(() => skewScrolling());
+    } else {
+      null;
+    }
   };
 
   return (
@@ -69,10 +74,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main
-        ref={!isMobile ? scrollContainer : null}
-        className="pointer-events-none"
-      >
+      <main ref={scrollContainer} className="pointer-events-none">
         <Heading />
         <About />
         <Projects />
