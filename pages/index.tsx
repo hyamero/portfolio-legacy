@@ -29,6 +29,8 @@ const Home: NextPage = () => {
       document.body.style.height = `${
         scrollContainer.current?.getBoundingClientRect().height
       }px`;
+    } else {
+      null;
     }
   }, [size?.height]);
 
@@ -74,7 +76,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main ref={scrollContainer} className="pointer-events-none">
+      <main
+        ref={scrollContainer}
+        className={`${!isMobile ? "pointer-events-none" : null}`}
+      >
         <Heading />
         <About />
         <Projects />
