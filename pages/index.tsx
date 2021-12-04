@@ -50,7 +50,7 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div ref={layout} className="fixed top-0 left-0 h-[100%] w-[100%] ">
+    <div ref={layout} className="fixed top-0 left-0 h-[100%] w-[100%]">
       <Head>
         <title>Dale Bañares</title>
         <meta name="description" content="Dale Bañares Portfolio" />

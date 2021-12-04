@@ -9,7 +9,7 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
     <div className="bg-transparent min-h-[200vh] py-[300px] flex flex-col justify-between gap-96 items-center px-10">
       <h1 className="lol"></h1>
       {projects.map((project: any, i: number) => (
-        <div key={i} className="light-overlay relative">
+        <a key={i} className="cursor-pointer" href={project.link}>
           <Image
             priority
             src={project.img}
@@ -17,10 +17,7 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
             height={350}
             width={640}
           />
-          <p className="font-druk text-4xl text-outline text-dark text-center">
-            {project.title}
-          </p>
-        </div>
+        </a>
       ))}
     </div>
   );
