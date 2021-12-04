@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import { isMobile } from "react-device-detect";
+
 import Heading from "../components/Heading";
 import { About } from "../components/About";
 import { Projects } from "../components/Projects";
@@ -14,6 +16,13 @@ const Home: NextPage = () => {
 
   const layout = useRef<HTMLDivElement>(null);
   const scrollContainer = useRef<HTMLDivElement>(null);
+
+  // let ref
+  // const refValue = () => {
+  //   if (!isMobile) {
+  //     ref = 'scrollContainer'
+  //   }
+  // }
 
   const skewConfigs = {
     ease: 0.1,
@@ -50,14 +59,20 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div ref={layout} className="fixed top-0 left-0 h-[100%] w-[100%]">
+    <div
+      ref={layout}
+      className={`${!isMobile ? "fixed top-0 left-0" : null} h-[100%] w-[100%]`}
+    >
       <Head>
         <title>Dale Bañares</title>
         <meta name="description" content="Dale Bañares Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main ref={scrollContainer} className="pointer-events-none">
+      <main
+        ref={!isMobile ? scrollContainer : null}
+        className="pointer-events-none"
+      >
         <Heading />
         <About />
         <Projects />
