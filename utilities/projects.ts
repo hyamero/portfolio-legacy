@@ -3,6 +3,7 @@ import collectiveApis from "../public/img/projects/collective-apis.jpg"
 import cayenne from "../public/img/projects/CayennePage.jpg"
 import haboleon from "../public/img/projects/haboleon.jpg"
 import galaxy from "../public/img/projects/galaxy.jpg"
+import wave from "../public/img/projects/wave.jpg"
  
 export const projects: any[] = [
     {
@@ -23,7 +24,7 @@ export const projects: any[] = [
         "img": haboleon,
     },
     {
-        "title": "Galaxy",
-        "img": galaxy,
+        "title": "Wave",
+        "img": wave,
     },
 ]
