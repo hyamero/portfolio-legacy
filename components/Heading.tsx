@@ -25,7 +25,7 @@ interface HeadingProps {}
 
 const Heading: React.FC<HeadingProps> = ({}) => {
   return (
-    <header className="container h-screen bg-dark flex flex-col justify-center items-center">
+    <header className="container h-screen bg-dark flex flex-col justify-center items-center z-10">
       <div className="relative">
         <p className="layer sub-text mr-auto absolute top-[-1rem] left-[3rem] overflow-hidden md:left-[2rem] md:top-[-0.6rem]">
           HI, I&apos;M DALE BAÑARES

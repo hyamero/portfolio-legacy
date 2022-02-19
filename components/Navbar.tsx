@@ -26,7 +26,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
   return (
     <nav className="container fixed top-0 center mt-12 mx-auto px-20 z-10">
       <div className="font-helvetica text-light flex justify-between">
-        <h3>DALE B.</h3>
+        <h3 className="mix-blend-exclusion">DALE B.</h3>
         {!scroll && (
           <ul className="text-xs tracking-wider nav-btns">
             <NavBtns />

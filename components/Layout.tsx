@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Navbar } from "./Navbar";
 
 interface LayoutProps {}
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const scrollRef = useRef<any>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const scroll = import("locomotive-scroll").then((LocomotiveScroll) => {
+      new LocomotiveScroll.default({
+        el: scrollRef.current,
+        smooth: true,
+        smoothMobile: false,
+      });
+    });
+  }, []);
+
   return (
-    <div className="">
+    <>
       <Navbar />
-      <div className="filled-text z-[-3] max-w-[1920px]"></div>
-      <div className="stroke-text z-[-1] max-w-[1920px] mix-blend-exclusion"></div>
-      <main className="max-w-[1920px]">{children}</main>
-    </div>
+      <main ref={scrollRef} data-scroll-container className="max-w-[1920px]">
+        {children}
+      </main>
+    </>
   );
 };
