@@ -2,8 +2,6 @@ import boisson from '../public/img/projects/boisson.jpg'
 import collectiveApis from "../public/img/projects/collective-apis.jpg"
 import cayenne from "../public/img/projects/CayennePage.jpg"
 import haboleon from "../public/img/projects/haboleon.jpg"
-import galaxy from "../public/img/projects/galaxy.jpg"
-import wave from "../public/img/projects/wave.jpg"
  
 export const projects: any[] = [
     {
@@ -22,9 +20,5 @@ export const projects: any[] = [
     {
         "title": "Haboleon",
         "img": haboleon,
-    },
-    {
-        "title": "Wave",
-        "img": wave,
     },
 ]
