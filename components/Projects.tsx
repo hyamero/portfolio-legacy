@@ -27,18 +27,20 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
         <a
           data-scroll
           data-scroll-direction="horizontal"
-          data-scroll-speed={1 + i}
+          data-scroll-speed={0.6 + i}
           key={i}
-          className="cursor-pointer z-[2]"
+          className="cursor-pointer z-[2] overflow-hidden"
           href={project.link}
         >
-          <Image
-            priority
-            src={project.img}
-            alt={project.title}
-            height={350}
-            width={640}
-          />
+          <div data-scroll data-scroll-speed={1}>
+            <Image
+              priority
+              src={project.img}
+              alt={project.title}
+              height={350}
+              width={640}
+            />
+          </div>
         </a>
       ))}
     </div>
