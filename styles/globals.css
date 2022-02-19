@@ -63,7 +63,7 @@ html {
 }
 
 .filled-text {
-  height: 60vh;
+  height: 100vh;
   width: 100%;
 
   background-image: url("../public/img/PROJECTSfilled.svg");
@@ -74,7 +74,7 @@ html {
 }
 
 .stroke-text {
-  height: 60vh;
+  height: 100vh;
   width: 100%;
 
   background-image: url("../public/img/PROJECTSstroke.svg");

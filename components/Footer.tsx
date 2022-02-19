@@ -4,9 +4,18 @@ interface FooterProps {}
 
 export const Footer: React.FC<FooterProps> = ({}) => {
   return (
-    <div className="h-screen bg-dark flex flex-col justify-center items-center container">
+    <div
+      data-scroll-section
+      className="h-screen bg-dark flex flex-col justify-center items-center container"
+    >
       <div className="font-helvetica font-normal text-center text-white text-clamp whitespace-nowrap  borderline w-[95vw]  py-8  border-t border-b`">
-        GET I<span className="font-sprat">N</span> TOUCH
+        <div
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed={1}
+        >
+          GET I<span className="font-sprat">N</span> TOUCH
+        </div>
       </div>
       <p className="font-helvetica text-2xl text-white mt-5">
         daleban.dev@gmail.com{" "}

@@ -7,6 +7,7 @@ interface ProjectsProps {}
 export const Projects: React.FC<ProjectsProps> = ({}) => {
   return (
     <div
+      data-scroll-section
       id="projects"
       className=" min-h-[200vh] py-[300px] flex flex-col justify-between gap-96 items-center px-10 relative"
     >
@@ -14,16 +15,23 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
         data-scroll
         data-scroll-sticky
         data-scroll-target="#projects"
-        className="filled-text z-[-1] max-w-[1920px] absolute top-[2rem]"
+        className="filled-text z-[-1] max-w-[1920px] absolute top-0"
       ></div>
       <div
         data-scroll
         data-scroll-sticky
         data-scroll-target="#projects"
-        className="stroke-text z-[3] max-w-[1920px] mix-blend-exclusion absolute top-[2rem]"
+        className="stroke-text z-[3] max-w-[1920px] mix-blend-exclusion absolute top-0"
       ></div>
       {projects.map((project: any, i: number) => (
-        <a key={i} className="cursor-pointer z-[2]" href={project.link}>
+        <a
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed={1 + i}
+          key={i}
+          className="cursor-pointer z-[2]"
+          href={project.link}
+        >
           <Image
             priority
             src={project.img}

@@ -5,7 +5,12 @@ interface MarqueeProps {}
 
 export const Marquee: React.FC<MarqueeProps> = ({}) => {
   return (
-    <div className="max-w-[1920px]">
+    <div
+      data-scroll
+      data-scroll-direction="horizontal"
+      data-scroll-speed={3}
+      className="max-w-[1920px]"
+    >
       <div className="mb-20">
         {/* MARQUEE codeTechs*/}
         <div className="flex">

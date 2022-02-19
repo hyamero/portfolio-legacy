@@ -10,6 +10,7 @@ export const About: React.FC<AboutProps> = ({}) => {
 
   return (
     <div
+      data-scroll-section
       ref={aboutRef}
       id="about"
       className="max-w-[1920px] mx-auto min-h-screen bg-black font-helvetica relative overflow-hidden flex flex-col"
