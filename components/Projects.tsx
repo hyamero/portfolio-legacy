@@ -9,7 +9,7 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
     <section
       data-scroll-section
       id="projects"
-      className=" min-h-[200vh] py-[300px] flex flex-col justify-between gap-96 items-center px-10 relative"
+      className=" min-h-[200vh] py-[300px] flex flex-col justify-between gap-96 sm:gap-56 items-center px-10 relative"
     >
       <div
         data-scroll
@@ -27,13 +27,15 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
         <a
           data-scroll
           data-scroll-direction="horizontal"
-          data-scroll-speed={0.6 + i}
+          data-scroll-speed={0.7 + i}
           key={i}
-          className="cursor-pointer z-[2] overflow-hidden "
+          className="cursor-pointer z-[2] overflow-hidden"
           href={project.link}
+          target="_blank"
         >
           <div data-scroll data-scroll-speed={1} className="relative">
             <Image
+              data-scroll
               priority
               src={project.img}
               alt={project.title}
@@ -41,12 +43,9 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
               width={640}
               quality={100}
               placeholder="blur"
-              className="transition-transform ease-out duration-300 hover:scale-110 hover:opacity-80"
+              className="transition-transform ease-out duration-300 hover:scale-110 hover:opacity-80 rounded"
             />
           </div>
-          <p className="font-helvetica text-3xl uppercase absolute bottom-8 left-8 text-white mix-blend-difference whitespace-nowrap space-x-8">
-            <span>{project.title}</span>
-          </p>
         </a>
       ))}
     </section>

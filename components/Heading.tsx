@@ -1,10 +1,12 @@
 import React from "react";
+import { CgMouse } from "react-icons/cg";
 
 interface HeadingProps {}
 
 const Heading: React.FC<HeadingProps> = ({}) => {
   return (
     <header
+      id="home"
       data-scroll-section
       className="container h-screen bg-dark flex flex-col justify-center items-center z-10"
     >
@@ -30,6 +32,11 @@ const Heading: React.FC<HeadingProps> = ({}) => {
           FRONT-END DEVELOPER <br /> AND UI/UX DESIGNER, <br /> FULL-STACK
           CAPABLE
         </p>
+      </div>
+      <div data-scroll data-scroll-speed={-3} className="cursor-pointer">
+        <a href="#about" data-scroll-to>
+          <CgMouse className="text-white/75 text-2xl absolute bottom-[-9rem]" />
+        </a>
       </div>
     </header>
   );

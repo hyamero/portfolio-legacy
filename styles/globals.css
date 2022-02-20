@@ -80,6 +80,29 @@
   pointer-events: none;
 }
 
+.hover-effect a {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+.hover-effect a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #dbd8d6;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.hover-effect a:hover:after {
+  width: 100%;
+  left: 0;
+  background: #dbd8d6;
+}
+
 @media (max-width: 1070px) {
   .sub-sentence {
     right: 1.3rem;
