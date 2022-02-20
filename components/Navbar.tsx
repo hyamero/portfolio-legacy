@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const slideDown = {
   hidden: {},
@@ -8,78 +7,16 @@ const slideDown = {
 interface NavbarProps {}
 
 export const Navbar: React.FC<NavbarProps> = ({}) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  // Scroll detection
-  const [scrollDown, setScrollDown] = useState<boolean>(false);
-  const [scrollUp, setScrollUp] = useState<boolean>(false);
-
-  const [scroll, setScroll] = useState<boolean>(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 300);
-      setIsOpen(window.scrollY < 300);
-    });
-  }, []);
-
   return (
     <nav className="container max-w-[1920px] fixed top-0 center mt-12 mx-auto px-20 z-10">
       <div className="font-helvetica text-white flex justify-between">
         <h3 className="mix-blend-exclusion">DALE B.</h3>
-        {!scroll && (
-          <ul className="text-xs tracking-wider nav-btns">
-            <NavBtns />
-          </ul>
-        )}
-        {scroll && (
-          <>
-            {!isOpen && (
-              <motion.button
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ ease: "easeOut", duration: 0.3 }}
-                onMouseEnter={() => setIsOpen(true)}
-                onClick={() => setIsOpen(!isOpen)}
-                className="bg-dark rounded-3xl text-sm px-2 border border-light"
-              >
-                MENU
-              </motion.button>
-            )}
-            {isOpen && (
-              <motion.ul
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ ease: "easeOut", duration: 0.3 }}
-                onMouseLeave={() => setIsOpen(false)}
-                className="text-xs tracking-wider nav-btns bg-dark px-10 py-10 rounded-3xl text-center fixed right-[2.5rem] top-0"
-              >
-                <motion.button
-                  onMouseEnter={() => setIsOpen(true)}
-                  onClick={() => setIsOpen(!isOpen)}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ ease: "easeOut", duration: 0.3 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  className="bg-dark rounded-3xl text-sm mb-5 text-center mx-auto"
-                >
-                  MENU
-                </motion.button>
-                <NavBtns />
-              </motion.ul>
-            )}
-          </>
-        )}{" "}
+        <ul className="text-xs tracking-wider nav-btns">
+          <NavBtns />
+        </ul>
       </div>
     </nav>
   );
-};
-
-const navChildren = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
 };
 
 const navText = ["home", "about", "projects", "contact"];
@@ -88,13 +25,7 @@ const NavBtns: React.FC = ({}) => {
   return (
     <div className="text-left">
       {navText.map((text, i) => (
-        <motion.li
-          variants={navChildren}
-          initial="hidden"
-          animate="visible"
-          transition={{ ease: "easeOut", duration: 0.3, delay: i * 0.1 }}
-          key={i}
-        >
+        <li key={i}>
           <a
             className="uppercase cursor-pointer"
             href={`#${text}`}
@@ -102,7 +33,7 @@ const NavBtns: React.FC = ({}) => {
           >
             {text}
           </a>
-        </motion.li>
+        </li>
       ))}
     </div>
   );

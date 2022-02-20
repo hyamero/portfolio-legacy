@@ -91,19 +91,6 @@
   background: #e4d0b9;
   color: #141414;
 }
-::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
-  border: 1px solid #d5d5d5;
-}
-::-webkit-scrollbar-track {
-  border-radius: 30px;
-  background: #141414;
-}
-::-webkit-scrollbar-thumb {
-  border-radius: 30px;
-  background: #e4d0b9;
-}
 
 @font-face {
   font-family: helvetica;
