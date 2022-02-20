@@ -19,13 +19,12 @@ export const About: React.FC<AboutProps> = ({}) => {
         <h4 className="borderline w-[100%] mx-[auto] pt-20 pb-14 tracking-wider">
           ABOUT
         </h4>
-        <p className="sub-text whitespace-normal text-ylw-100 text-md text-center w-[80%] mx-auto mt-14 mb-40">
-          MY NAME IS{" "}
-          <span className="font-druk tracking-widest">JOSEPH DALE BAÑARES</span>{" "}
-          AND I’M A WEB DEVELOPER BASED IN THE PHILIPPINES. I DO CREATIVE
-          DEVELOPMENT THAT DEALS 3D ENVIRONMENTS AND UI/UX DESIGN. I USE WEBGL
-          USING THREE.JS WITH REACT, AND I LOVE CREATING ELEGANT AND RESPONSIVE
-          WEBSITES.{" "}
+        <p className="sub-text whitespace-normal text-ylw-100 text-md text-center w-[80%] mx-auto mt-14 mb-40 uppercase">
+          Hey, I&apos;m{" "}
+          <span className="font-druk tracking-widest">Joseph Dale Bañares</span>
+          , and i&apos;m eighteen years old. I am a front-end web developer
+          based in the philippines, and I am aiming to become a creative
+          developer. I mainly use react, and I love creating beautiful websites!
         </p>
       </div>
       <Marquee />
