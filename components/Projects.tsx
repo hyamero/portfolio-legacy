@@ -32,6 +32,7 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
           className="cursor-pointer z-[2] overflow-hidden"
           href={project.link}
           target="_blank"
+          rel="noreferrer"
         >
           <div data-scroll data-scroll-speed={1} className="relative">
             <Image
