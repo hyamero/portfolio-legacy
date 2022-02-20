@@ -1,33 +1,59 @@
 import React from "react";
+import {
+  AiOutlineLinkedin,
+  AiOutlineGithub,
+  AiOutlineInstagram,
+} from "react-icons/ai";
 
 interface FooterProps {}
 
 export const Footer: React.FC<FooterProps> = ({}) => {
   return (
     <div
+      id="contact"
       data-scroll-section
       className="h-screen bg-dark flex flex-col justify-center items-center max-w-[1920px]"
     >
-      <div className="font-helvetica font-normal text-center text-white text-clamp whitespace-nowrap borderline py-8  border-t border-b`">
+      <div className="font-helvetica font-normal text-center text-white text-clamp whitespace-nowrap borderline py-8  border-t border-b w-[80vw] max-w-[1440px]">
         <div
           data-scroll
-          data-scroll-direction="horizontal"
-          data-scroll-speed={1}
+          data-scroll-speed={-7}
+          className="hover-effect leading-none"
         >
-          GET I<span className="font-sprat">N</span> TOUCH
+          <a href="mailto:daleban.alt@gmail.com">GET IN TOUCH</a>
         </div>
       </div>
-      <p className="font-helvetica text-2xl text-white mt-5">
-        daleban.dev@gmail.com{" "}
-      </p>
-      <p className="font-sans text-lg text-white">New 3D Portfolio WIP 👀</p>
-      <footer className="absolute bottom-0 w-full p-8">
-        <p className="text-center text-white text-sm tracking-wider">
+      <footer className="absolute bottom-0 w-full py-8 px-[90px] flex justify-between items-center sm:flex-col sm:space-y-2">
+        <p className="text-center text-white text-sm tracking-wider font-helvetica sm:text-xs">
           &copy;2022 | DALE BAN.
         </p>
+        <ul className="text-white flex space-x-6 text-[1.4rem]">
+          <li>
+            <a
+              href="https://github.com/hyamero"
+              className="hover:text-gray-300 transition-colors"
+            >
+              <AiOutlineGithub />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/dale.hyamero/"
+              className="hover:text-gray-300 transition-colors"
+            >
+              <AiOutlineInstagram />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/daleban/"
+              className="hover:text-gray-300 transition-colors"
+            >
+              <AiOutlineLinkedin />
+            </a>
+          </li>
+        </ul>
       </footer>
     </div>
   );
 };
-
-// Some Inspirations from theshift.tokyo
