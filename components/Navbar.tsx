@@ -24,8 +24,8 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
   }, []);
 
   return (
-    <nav className="container fixed top-0 center mt-12 mx-auto px-20 z-10">
-      <div className="font-helvetica text-light flex justify-between">
+    <nav className="container max-w-[1920px] fixed top-0 center mt-12 mx-auto px-20 z-10">
+      <div className="font-helvetica text-white flex justify-between">
         <h3 className="mix-blend-exclusion">DALE B.</h3>
         {!scroll && (
           <ul className="text-xs tracking-wider nav-btns">
@@ -95,7 +95,13 @@ const NavBtns: React.FC = ({}) => {
           transition={{ ease: "easeOut", duration: 0.3, delay: i * 0.1 }}
           key={i}
         >
-          <a className="uppercase cursor-pointer">{text}</a>
+          <a
+            className="uppercase cursor-pointer"
+            href={`#${text}`}
+            data-scroll-to
+          >
+            {text}
+          </a>
         </motion.li>
       ))}
     </div>

@@ -6,9 +6,9 @@ export const Footer: React.FC<FooterProps> = ({}) => {
   return (
     <div
       data-scroll-section
-      className="h-screen bg-dark flex flex-col justify-center items-center container"
+      className="h-screen bg-dark flex flex-col justify-center items-center max-w-[1920px]"
     >
-      <div className="font-helvetica font-normal text-center text-white text-clamp whitespace-nowrap  borderline w-[95vw]  py-8  border-t border-b`">
+      <div className="font-helvetica font-normal text-center text-white text-clamp whitespace-nowrap borderline py-8  border-t border-b`">
         <div
           data-scroll
           data-scroll-direction="horizontal"

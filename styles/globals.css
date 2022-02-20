@@ -32,10 +32,6 @@
   }
 }
 
-html {
-  background-color: #fff;
-}
-
 .text-clamp {
   font-size: clamp(2rem, 8vw, 6rem);
 }
