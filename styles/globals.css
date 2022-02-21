@@ -103,6 +103,15 @@
   background: #dbd8d6;
 }
 
+.clip-0 {
+  clip-path: inset(50% 0% 0% 0%);
+  transition: clip-path 1.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.img.is-inview {
+  clip-path: inset(0% 0% 0% 0%);
+}
+
 @media (max-width: 1070px) {
   .sub-sentence {
     right: 1.3rem;

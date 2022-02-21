@@ -29,22 +29,26 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
           data-scroll-direction="horizontal"
           data-scroll-speed={0.7 + i}
           key={i}
-          className="cursor-pointer z-[2] overflow-hidden"
+          className="cursor-pointer z-[2] overflow-hidden clip-0 img"
           href={project.link}
           target="_blank"
           rel="noreferrer"
         >
-          <div data-scroll data-scroll-speed={1} className="relative">
+          <div
+            data-scroll
+            data-scroll-speed={2}
+            data-scroll-delay={1}
+            className="relative"
+          >
             <Image
-              data-scroll
               priority
               src={project.img}
               alt={project.title}
-              height={350}
-              width={640}
+              height={410}
+              width={740}
               quality={100}
               placeholder="blur"
-              className="transition-transform ease-out duration-300 hover:scale-110 hover:opacity-80 rounded"
+              className="rounded"
             />
           </div>
         </a>
