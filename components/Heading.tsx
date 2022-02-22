@@ -35,7 +35,7 @@ const Heading: React.FC<HeadingProps> = ({}) => {
       </div>
       <div data-scroll data-scroll-speed={-3} className="cursor-pointer">
         <a href="#about" data-scroll-to>
-          <CgMouse className="text-white/75 text-2xl absolute bottom-[-9rem]" />
+          <CgMouse className="text-white/75 text-2xl absolute bottom-[-9rem] left-[-1rem] md:text-base" />
         </a>
       </div>
     </header>

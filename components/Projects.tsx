@@ -9,7 +9,7 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
     <section
       data-scroll-section
       id="projects"
-      className=" min-h-[200vh] py-[300px] flex flex-col justify-between gap-96 sm:gap-56 items-center px-10 relative"
+      className=" min-h-[200vh] py-[300px] md:py-[50px] sm:py-[0px] flex flex-col justify-between gap-96 sm:gap-56 items-center px-10 relative bg-white"
     >
       <div
         data-scroll
@@ -27,7 +27,7 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
         <a
           data-scroll
           data-scroll-direction="horizontal"
-          data-scroll-speed={0.7 + i}
+          data-scroll-speed={1 + i}
           key={i}
           className="cursor-pointer z-[2] overflow-hidden clip-0 img"
           href={project.link}

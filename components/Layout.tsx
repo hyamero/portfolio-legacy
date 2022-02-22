@@ -1,6 +1,18 @@
 import React, { useEffect, useRef } from "react";
 import { Navbar } from "./Navbar";
+// import LocomotiveScroll from 'locomotive-scroll'
 import "../node_modules/locomotive-scroll/dist/locomotive-scroll.css";
+
+const debounce = (fn: any, ms: number) => {
+  let timer: any;
+  return () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      timer = null;
+      fn.apply(this);
+    }, ms);
+  };
+};
 
 interface LayoutProps {}
 

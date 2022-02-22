@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
       <div className="font-helvetica font-normal text-center text-white text-clamp whitespace-nowrap borderline py-8  border-t border-b w-[80vw] max-w-[1440px]">
         <div
           data-scroll
-          data-scroll-speed={-7}
+          data-scroll-speed={3}
           className="hover-effect leading-none"
         >
           <a href="mailto:daleban.alt@gmail.com">GET IN TOUCH</a>
