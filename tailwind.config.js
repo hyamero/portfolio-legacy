@@ -18,6 +18,7 @@ module.exports = {
         helvetica: ["helvetica"],
         sprat: ["sprat"],
         druk: ["druk"],
+        raleway: ["Raleway, sans-serif"],
       },
 
       screens: {
