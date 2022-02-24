@@ -6,9 +6,11 @@ const welcomeScreen = gsap.timeline({
   paused: true,
 });
 
-interface LoaderProps {}
+interface LoaderProps {
+  setLoaderComplete: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-export const Loader: React.FC<LoaderProps> = ({}) => {
+export const Loader: React.FC<LoaderProps> = ({ setLoaderComplete }) => {
   useEffect(() => {
     if (typeof window === "undefined") {
       return;
@@ -57,21 +59,10 @@ export const Loader: React.FC<LoaderProps> = ({}) => {
         duration: 0.8,
         y: -2000,
         ease: "Power4.out",
+        onComplete: handleLoaderComplete,
       },
       "-=0.4"
     );
-
-    // welcomeScreen.from(
-    //   ".welcome-screen h1",
-    //   {
-    //     y: 200,
-    //     duration: 0.5,
-    //     stagger: {
-    //       amount: 0.2,
-    //     },
-    //   },
-    //   "-=.8"
-    // );
 
     function loader() {
       id = setInterval(frame, 45);
@@ -96,6 +87,10 @@ export const Loader: React.FC<LoaderProps> = ({}) => {
   let id: any,
     i = 0;
 
+  const handleLoaderComplete = () => {
+    setLoaderComplete(true);
+  };
+
   return (
     <>
       <div className="loading-screen absolute z-[11] w-full h-screen bg-black text-white overflow-hidden">
@@ -112,7 +107,7 @@ export const Loader: React.FC<LoaderProps> = ({}) => {
             Bañares
           </div>
         </div>
-        {/* <div className="bottom-section w-screen font-kenoky text-xs text-center absolute bottom-0 left-0 font-helvetica uppercase tracking">
+        {/* <div className="bottom-section w-screen text-xs text-center absolute bottom-0 left-0 font-helvetica uppercase tracking">
           <div className="bottom-line">Dale B. Portfolio 2022&#169;.</div>
           <div className="bottom-line">All Rights Reserved</div>
         </div> */}

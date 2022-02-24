@@ -1,16 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { CgMouse } from "react-icons/cg";
+import { gsap } from "gsap";
 
-interface HeadingProps {}
+const headerTl = gsap.timeline();
 
-const Heading: React.FC<HeadingProps> = ({}) => {
+interface HeadingProps {
+  loaderComplete: boolean;
+}
+
+const Heading: React.FC<HeadingProps> = ({ loaderComplete }) => {
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    if (loaderComplete) {
+      console.log("loader compelte");
+      headerTl
+        .to(
+          ".head-container",
+          {
+            css: { visibility: "visible" },
+          },
+          "-=1"
+        )
+        .from(".line-block span", {
+          duration: 1.8,
+          delay: -0.8,
+          y: 150,
+          ease: "power4.out",
+          skewY: 7,
+          stagger: {
+            amount: 0.3,
+          },
+        });
+    }
+  }, [loaderComplete]);
+
   return (
     <header
       id="home"
       data-scroll-section
-      className="container h-screen bg-dark flex flex-col justify-center items-center z-10"
+      className="h-screen bg-dark flex flex-col justify-center items-center z-10"
     >
-      <div className="relative">
+      <div className="head-container relative invisible">
         <p
           data-scroll
           data-scroll-speed={1}
@@ -18,12 +51,23 @@ const Heading: React.FC<HeadingProps> = ({}) => {
         >
           HI, I&apos;M DALE BAÑARES
         </p>
-        <div className="text-clamp header-text inline-block relative">
-          &nbsp; I <span>DESIGN</span> AND
-          <br /> DEVELOP <span>ELEGANT</span>
-          <br />
-          &nbsp; &nbsp; WEBSITES
-        </div>
+        <h1>
+          <div className="line-block overflow-hidden relative h-[clamp(2rem,8vw,6rem)] w-screen text-center">
+            <span className="header-text text-clamp absolute left-0 right-[180px]">
+              &nbsp; I <span>DESIGN</span> AND
+            </span>
+          </div>
+          <div className="line-block overflow-hidden relative h-[clamp(2rem,8vw,6rem)] w-screen text-center">
+            <span className="header-text text-clamp absolute left-0 right-0">
+              DEVELOP <span>ELEGANT</span>
+            </span>
+          </div>
+          <div className="line-block overflow-hidden relative h-[clamp(2rem,8vw,6rem)] w-screen text-center">
+            <span className="header-text text-clamp absolute left-0 right-[100px]">
+              WEBSITES
+            </span>
+          </div>
+        </h1>
         <p
           data-scroll
           data-scroll-speed={1}

@@ -10,14 +10,8 @@ import { Footer } from "../components/Footer";
 import { Loader } from "../components/Loader";
 
 const Home: NextPage = () => {
-  const [load, setLoad] = useState<boolean>(true);
+  const [loaderComplete, setLoaderComplete] = useState<boolean>(false);
 
-  // Handle Loader unmount
-  useEffect(() => {
-    setTimeout(() => {
-      setLoad(false);
-    }, 8000);
-  }, []);
   return (
     <div className="h-[100%] w-[100%]">
       <Head>
@@ -27,8 +21,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        {load && <Loader />}
-        <Heading />
+        {!loaderComplete && <Loader setLoaderComplete={setLoaderComplete} />}
+        <Heading loaderComplete={loaderComplete} />
         <About />
         <Projects />
         <Footer />
