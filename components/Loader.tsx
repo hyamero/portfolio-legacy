@@ -65,7 +65,7 @@ export const Loader: React.FC<LoaderProps> = ({ setLoaderComplete }) => {
     );
 
     function loader() {
-      id = setInterval(frame, 45);
+      id = setInterval(frame, 20);
     }
     function frame() {
       if (i >= 100) {

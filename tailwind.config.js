@@ -19,6 +19,7 @@ module.exports = {
         sprat: ["sprat"],
         druk: ["druk"],
         raleway: ["Raleway, sans-serif"],
+        kenoky: ["Kenoky"],
       },
 
       screens: {

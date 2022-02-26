@@ -21,7 +21,7 @@
 
   .sub-text {
     @apply text-sub whitespace-nowrap font-helvetica;
-    font-size: clamp(0.01rem, 2vw, 1rem);
+    font-size: clamp(0.01rem, 1.6vw, 1rem);
   }
 
   .tech-text {
@@ -120,8 +120,29 @@
 
 @media (max-width: 1070px) {
   .sub-sentence {
-    right: 1.3rem;
+    right: 7rem;
+    bottom: -0.1rem;
+  }
+  .layer {
+    top: -0.4rem;
+  }
+}
+@media (max-width: 920px) {
+  .sub-sentence {
+    right: 5rem;
     bottom: -0.5rem;
+  }
+  .layer {
+    left: 6rem;
+  }
+}
+@media (max-width: 639px) {
+  .sub-sentence {
+    right: 1rem;
+    bottom: 0;
+  }
+  .layer {
+    left: 4rem;
   }
 }
 
