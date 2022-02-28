@@ -9,19 +9,19 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
     <section
       data-scroll-section
       id="projects"
-      className=" min-h-[200vh] py-[300px] md:py-[50px] sm:py-[0px] flex flex-col justify-between gap-96 sm:gap-56 items-center px-10 relative bg-white"
+      className=" min-h-[200vh] py-[300px] md:py-[50px] flex flex-col justify-between gap-96 sm:gap-20 items-center px-10 relative bg-white"
     >
       <div
         data-scroll
         data-scroll-sticky
         data-scroll-target="#projects"
-        className="filled-text z-[-1] max-w-[1920px] absolute top-0"
+        className="filled-text z-[-1] max-w-[1920px] absolute top-0 h-screen sm:h-[50vh]"
       ></div>
       <div
         data-scroll
         data-scroll-sticky
         data-scroll-target="#projects"
-        className="stroke-text z-[3] max-w-[1920px] mix-blend-exclusion absolute top-0"
+        className="stroke-text z-[3] max-w-[1920px] mix-blend-exclusion absolute top-0 h-screen sm:h-[50vh]"
       ></div>
       {projects.map((project: any, i: number) => (
         <a
