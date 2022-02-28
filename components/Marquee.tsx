@@ -5,15 +5,36 @@ interface MarqueeProps {}
 
 export const Marquee: React.FC<MarqueeProps> = ({}) => {
   return (
-    <div
-      data-scroll
-      data-scroll-direction="horizontal"
-      data-scroll-speed={3}
-      className="max-w-[1920px]"
-    >
-      <div className="mb-20">
+    <div className="max-w-[1920px]">
+      <div className="mb-20 sm:mb-10">
+        <div
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed={2}
+          className="flex space-x-20 md:space-x-10"
+        >
+          {codeTechs.map((tech: any, i: number) => (
+            <div key={i} className="tech-text font-druk">
+              {tech}
+            </div>
+          ))}
+        </div>
+
+        <div
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed={-2}
+          className="flex space-x-20 md:space-x-10"
+        >
+          {designTechs.map((tech: any, i: number) => (
+            <div key={i} className="tech-text font-druk text-ylw-100">
+              {tech}
+            </div>
+          ))}
+        </div>
+
         {/* MARQUEE codeTechs*/}
-        <div className="flex">
+        {/* <div className="flex">
           <div className="marquee flex space-x-20 md:space-x-10">
             {codeTechs.map((tech: any, i: number) => (
               <div key={i} className="tech-text font-druk">
@@ -29,10 +50,10 @@ export const Marquee: React.FC<MarqueeProps> = ({}) => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* MARQUEE designTechs*/}
-        <div className="flex">
+        {/* <div className="flex">
           <div className="marqueeR flex space-x-20 md:space-x-10">
             {designTechs.map((tech: any, i: number) => (
               <div key={i} className="tech-text font-druk text-ylw-100">
@@ -48,7 +69,7 @@ export const Marquee: React.FC<MarqueeProps> = ({}) => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

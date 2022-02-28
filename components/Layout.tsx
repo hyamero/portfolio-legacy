@@ -31,6 +31,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         // smoothMobile: false,
       });
     });
+    console.log(scroll);
+    console.log("lol");
   }, []);
 
   return (
