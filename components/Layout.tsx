@@ -28,11 +28,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       new LocomotiveScroll.default({
         el: scrollRef.current,
         smooth: true,
-        // smoothMobile: false,
+        smoothMobile: true,
       });
     });
-    console.log(scroll);
-    console.log("lol");
   }, []);
 
   return (

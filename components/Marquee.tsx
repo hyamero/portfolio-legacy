@@ -33,7 +33,10 @@ export const Marquee: React.FC<MarqueeProps> = ({}) => {
           ))}
         </div>
 
-        {/* MARQUEE codeTechs*/}
+        {/*
+         * uncontrolled marquee scroll
+         */}
+
         {/* <div className="flex">
           <div className="marquee flex space-x-20 md:space-x-10">
             {codeTechs.map((tech: any, i: number) => (

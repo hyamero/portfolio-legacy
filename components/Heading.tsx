@@ -25,7 +25,7 @@ const Heading: React.FC<HeadingProps> = ({ loaderComplete }) => {
         )
         .from(".line-block span", {
           duration: 1.8,
-          delay: -0.8,
+          delay: -1.4,
           y: 150,
           ease: "power4.out",
           skewY: 7,
