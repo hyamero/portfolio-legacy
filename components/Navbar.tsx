@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const slideDown = {
   hidden: {},
@@ -7,13 +7,37 @@ const slideDown = {
 interface NavbarProps {}
 
 export const Navbar: React.FC<NavbarProps> = ({}) => {
+  useEffect(() => {
+    const menuItems = [...document.querySelectorAll(".menu-item")];
+    menuItems.forEach((item: any) => {
+      let word = item.children[0].children[0].innerText.split("");
+      item.children[0].innerHTML = "";
+      word.forEach((letter: string, idx: number) => {
+        item.children[0].innerHTML += `<span style="--index: ${idx};">${letter}</span>`;
+      });
+
+      let cloneDiv = item.children[0].cloneNode(true);
+      cloneDiv.style.position = "absolute";
+      cloneDiv.style.left = "0";
+      cloneDiv.style.top = "0";
+      item.appendChild(cloneDiv);
+    });
+  }, []);
+
   return (
-    <nav className="container max-w-[1920px] fixed top-0 center mt-12 mx-auto px-20 z-10 lg:px-10 mix-blend-exclusion">
+    <nav className="container max-w-[1920px] fixed top-0 center mt-12 mx-auto px-20 lg:px-10 z-10  mix-blend-exclusion">
       <div className="font-helvetica text-white flex justify-between">
-        <h3 className="md:text-xs tracking-widest">DALE B.</h3>
-        <ul className="text-xs tracking-wider md:text-[0.6rem] space-y-[0.15rem]">
+        <a
+          data-scroll-to
+          className="md:text-xs tracking-widest cursor-pointer font-playfair italic font-semibold"
+          href="#home"
+          style={{ transitionDelay: "0.01s" }}
+        >
+          DALE B.
+        </a>
+        <div className=" menu flex flex-col justify-center items-left text-sm tracking-wider sm:text-[0.6rem] sm:leading-3  space-y-[0.15rem] text-left">
           <NavBtns />
-        </ul>
+        </div>
       </div>
     </nav>
   );
@@ -25,15 +49,13 @@ const NavBtns: React.FC = ({}) => {
   return (
     <>
       {navText.map((text, i) => (
-        <li key={i} className="hover-effect">
-          <a
-            href={`#${text}`}
-            data-scroll-to
-            className="uppercase cursor-pointer tracking-widest"
-          >
-            {text}
-          </a>
-        </li>
+        <a data-scroll-to key={i} href={`#${text}`} className="menu-item">
+          <div>
+            <span className="menu-item-text uppercase font-medium tracking-wider">
+              {text}
+            </span>
+          </div>
+        </a>
       ))}
     </>
   );
