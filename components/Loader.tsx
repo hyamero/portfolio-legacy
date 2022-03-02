@@ -16,32 +16,15 @@ export const Loader: React.FC<LoaderProps> = ({ setLoaderComplete }) => {
       return;
     }
 
-    tl.from(".title", {
-      duration: 0.5,
-      opacity: 0,
-      y: 10,
-    });
-    tl.from(".bracket", {
+    tl.to(".bracket", {
       duration: 0.3,
-      scale: 0,
+      scale: 1,
       margin: 0,
     });
     tl.from("#loader", {
       duration: 0.2,
       scale: 0,
     });
-    tl.from(
-      ".bottom-line",
-      {
-        duration: 0.5,
-        y: 50,
-        opacity: 0,
-        stagger: {
-          amount: 0.1,
-        },
-      },
-      "-=.5"
-    );
 
     // welcome screen
     welcomeScreen.to(".loading-section", {
@@ -94,15 +77,19 @@ export const Loader: React.FC<LoaderProps> = ({ setLoaderComplete }) => {
     <>
       <div className="loading-screen absolute z-[11] w-full h-screen bg-black text-white overflow-hidden">
         <div className="loading-section absolute flex w-full h-screen items-center justify-center">
-          <div className="title mx-5 text-2xl font-helvetica font-medium uppercase tracking-wider">
+          <div className="title mx-5 text-3xl font-playfair italic font-medium tracking-wider">
             Dale
           </div>
-          <div className="bracket bracket1 text-3xl font-kenoky">(&nbsp;</div>
-          <div id="loader" className="text-3xl font-sprat font-medium">
+          <div className="bracket bracket1 text-2xl font-playfair scale-50">
+            (&nbsp;
+          </div>
+          <div id="loader" className="text-2xl font-sprat font-medium">
             {time}%
           </div>
-          <div className="bracket bracket2 text-3xl font-kenoky">&nbsp;)</div>
-          <div className="title mx-5 text-2xl font-helvetica font-medium uppercase tracking-wider">
+          <div className="bracket bracket2 text-2xl font-playfair scale-50">
+            &nbsp;)
+          </div>
+          <div className="title mx-5 text-3xl font-playfair italic font-medium tracking-wider">
             Bañares
           </div>
         </div>

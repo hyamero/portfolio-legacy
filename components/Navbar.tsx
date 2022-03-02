@@ -25,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
   }, []);
 
   return (
-    <nav className="container max-w-[1920px] fixed top-0 center mt-12 mx-auto px-20 lg:px-10 z-10  mix-blend-exclusion">
+    <nav className="container max-w-[1920px] fixed top-0 center mt-12 mx-auto px-20 lg:px-10 z-10 mix-blend-difference">
       <div className="font-helvetica text-white flex justify-between">
         <a
           data-scroll-to

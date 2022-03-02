@@ -18,7 +18,7 @@
   content: counters(menucounter, ".", decimal-leading-zero);
   position: absolute;
   left: -15px;
-  top: 0;
+  top: -0.1rem;
   font-size: 10px;
 }
 

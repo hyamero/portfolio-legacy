@@ -34,7 +34,7 @@ const Heading: React.FC<HeadingProps> = ({ loaderComplete }) => {
           },
         })
         .to(".show-anim", {
-          duration: 1,
+          duration: 0.7,
           delay: -0.8,
           opacity: 1,
         });
