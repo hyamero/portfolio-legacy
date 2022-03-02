@@ -64,22 +64,21 @@ export const Loader: React.FC<LoaderProps> = ({ setLoaderComplete }) => {
       "-=0.4"
     );
 
-    function loader() {
-      id = setInterval(frame, 20);
-    }
-    function frame() {
-      if (i >= 100) {
-        clearInterval(id);
-        welcomeScreen.play();
-      } else {
-        i++;
-        setTime(i);
-      }
-    }
-    window.onload = function () {
-      loader();
-    };
+    loader();
   }, []);
+
+  function loader() {
+    id = setInterval(frame, 20);
+  }
+  function frame() {
+    if (i >= 100) {
+      clearInterval(id);
+      welcomeScreen.play();
+    } else {
+      i++;
+      setTime(i);
+    }
+  }
 
   // initializing loader
   const [time, setTime] = useState<number>(0);
