@@ -34,6 +34,10 @@
   }
 }
 
+html {
+  background: black;
+}
+
 .text-clamp {
   font-size: clamp(2rem, 8vw, 6rem);
 }

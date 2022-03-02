@@ -11,6 +11,11 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
       id="projects"
       className=" min-h-[200vh] py-[300px] md:py-[50px] flex flex-col justify-between gap-96 sm:gap-20 items-center px-10 relative bg-white"
     >
+      <p className="absolute top-3 left-3 text-sub sub-text font-helvetica whitespace-normal">
+        NOTE FOR THE FOLLOWING PROJECTS: I MADE THESE PROJECTS WHEN I WAS JUST
+        BEGINNER WEB DEVELOPER. I WILL START MAKING PROJECTS WORTHY OF
+        SHOWCASING HERE SOON. PEACE!
+      </p>
       <div
         data-scroll
         data-scroll-sticky
