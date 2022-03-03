@@ -29,7 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
       <div className="font-helvetica text-white flex justify-between">
         <a
           data-scroll-to
-          className="md:text-xs tracking-widest cursor-pointer font-playfair italic font-semibold"
+          className="md:text-xs tracking-widest cursor-pointer font-sprat italic font-normal"
           href="#home"
           style={{ transitionDelay: "0.01s" }}
         >
@@ -51,7 +51,7 @@ const NavBtns: React.FC = ({}) => {
       {navText.map((text, i) => (
         <a data-scroll-to key={i} href={`#${text}`} className="menu-item">
           <div>
-            <span className="menu-item-text uppercase font-medium tracking-wider">
+            <span className="menu-item-text font-sprat font-normal uppercase tracking-wider">
               {text}
             </span>
           </div>

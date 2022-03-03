@@ -17,7 +17,7 @@ export const About: React.FC<AboutProps> = ({}) => {
       id="about"
       className="px-[200px] lg:px-[50px] max-w-[1920px] mx-auto min-h-[105vh] bg-black font-helvetica relative overflow-hidden sm:block sm:min-h-[75vh]"
     >
-      <h4 className="z-10 relative borderline w-[100%] mx-[auto] pt-40 md:pt-10 md:text-xs sm:mb-20 pb-14 sm:pb-5  tracking-wider">
+      <h4 className="z-10 relative borderline w-[100%] mx-[auto] pt-24 md:pt-10 md:text-xs sm:mb-20 pb-14 sm:pb-5  tracking-wider">
         ABOUT
       </h4>
       <div className="w-[70%] sm:w-full">
@@ -40,7 +40,7 @@ export const About: React.FC<AboutProps> = ({}) => {
           <a
             data-scroll-to
             data-scroll
-            data-scroll-speed={0.6}
+            data-scroll-speed={1}
             href="#contact"
             className="uppercase rounded-[100%] border-[0.5px] border-white text-white text-xs md:text-[0.6rem] w-40 h-40 md:w-28 md:h-28 mx-auto text-center flex justify-center items-center tracking-widest transition-all mix-blend-difference mb-20"
           >
