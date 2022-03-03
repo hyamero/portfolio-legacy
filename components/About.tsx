@@ -33,8 +33,9 @@ export const About: React.FC<AboutProps> = ({}) => {
             I&apos;m an eighteen year old front-end web developer based in
             Bacolod City, Philippines. I specialize in creative development and
             I love creating interactive websites. I mainly use react,
-            tailwindcss, and gsap in my projects. Outside the virtual world, I
-            run, swim, and cycle for fun!
+            tailwindcss, and gsap in my projects. I also have some experience
+            with Three.js 3D Web Development. Outside of the virtual world, I
+            enjoy running, swimming, and cycling.
           </p>
           <a
             data-scroll-to
@@ -45,6 +46,7 @@ export const About: React.FC<AboutProps> = ({}) => {
           >
             contact
           </a>
+          <div className="space bg-none h-80 lg:h-52"></div>
         </div>
       </div>
       <img
@@ -54,7 +56,9 @@ export const About: React.FC<AboutProps> = ({}) => {
         alt="image by Jocelyn Morales"
         className="z-[9] w-[38rem] sm:w-[20rem] rounded-tr-full rounded-tl-full -bottom-36 sm:-bottom-24 absolute right-0"
       />
-      {/* <Marquee /> */}
+      <div className="absolute bottom-0 -left-40">
+        <Marquee />
+      </div>
     </section>
   );
 };
