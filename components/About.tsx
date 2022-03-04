@@ -40,7 +40,7 @@ export const About: React.FC<AboutProps> = ({}) => {
           <a
             data-scroll-to
             data-scroll
-            data-scroll-speed={1}
+            data-scroll-delay={1}
             href="#contact"
             className="uppercase rounded-[100%] border-[0.5px] border-white text-white text-xs md:text-[0.6rem] w-40 h-40 md:w-28 md:h-28 mx-auto text-center flex justify-center items-center tracking-widest transition-all mix-blend-difference mb-20"
           >
