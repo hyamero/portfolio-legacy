@@ -75,7 +75,7 @@ export const Loader: React.FC<LoaderProps> = ({ setLoaderComplete }) => {
 
   return (
     <>
-      <div className="loading-screen absolute z-[11] w-full h-screen bg-black text-white overflow-hidden">
+      <div className="loading-screen absolute z-[13] w-full h-screen bg-black text-white overflow-hidden">
         <div className="loading-section absolute flex w-full h-screen items-center justify-center">
           <div className="title mx-5 text-3xl font-playfair italic font-medium tracking-wider">
             Dale

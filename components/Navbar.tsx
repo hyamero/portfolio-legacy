@@ -31,7 +31,6 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
           data-scroll-to
           className="md:text-xs tracking-widest cursor-pointer font-sprat italic font-normal"
           href="#home"
-          style={{ transitionDelay: "0.01s" }}
         >
           DALE B.
         </a>

@@ -82,6 +82,20 @@ html {
   pointer-events: none;
 }
 
+.noise::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  /* you can control opacity of noise  */
+  opacity: 0.03;
+  z-index: 12;
+  pointer-events: none;
+  background: url(../public/img/noise.gif);
+}
+
 .hover-effect a {
   cursor: pointer;
   position: relative;
@@ -92,6 +106,7 @@ html {
   position: absolute;
   width: 0;
   height: 2px;
+  margin-top: 5px;
   display: block;
   right: 0;
   background: #fdb140;
@@ -117,9 +132,9 @@ html {
     right: 7rem;
     bottom: -0.1rem;
   }
-  .layer {
+  /* .layer {
     top: -0.4rem;
-  }
+  } */
 }
 @media (max-width: 920px) {
   .sub-sentence {
@@ -128,16 +143,15 @@ html {
   }
   .layer {
     left: 7.4rem;
+    top: -0.6rem;
   }
 }
 @media (max-width: 639px) {
   .sub-sentence {
     right: 2rem;
-    bottom: -1rem;
   }
   .layer {
-    left: 4.5rem;
-    top: 0.8rem;
+    left: 4rem;
   }
 }
 

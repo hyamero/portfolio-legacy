@@ -1,3 +1,5 @@
+// Unused: Automatic text marquee movement
+
 .marquee {
   animation: marquee 220s linear infinite;
   animation-delay: -220s;

@@ -12,7 +12,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
     <div
       id="contact"
       data-scroll-section
-      className="h-screen bg-dark flex flex-col justify-center items-center max-w-[1920px] sm:h-[70vh]"
+      className="h-screen bg-dark flex flex-col justify-center items-center max-w-[1920px]"
     >
       <div className="font-helvetica font-normal text-center text-white text-clamp whitespace-nowrap borderline py-8  border-t border-b w-[80vw] max-w-[1440px]">
         <div

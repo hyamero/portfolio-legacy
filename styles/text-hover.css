@@ -13,14 +13,14 @@
   cursor: pointer;
 }
 
-.menu-item::before {
+/* .menu-item::before {
   counter-increment: menucounter;
   content: counters(menucounter, ".", decimal-leading-zero);
   position: absolute;
   left: -15px;
   top: -0.1rem;
   font-size: 10px;
-}
+} */
 
 .menu-item-text {
   pointer-events: none;
