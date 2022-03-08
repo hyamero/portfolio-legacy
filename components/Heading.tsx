@@ -45,9 +45,10 @@ const Heading: React.FC<HeadingProps> = ({ loaderComplete }) => {
     <>
       <header
         id="home"
-        data-scroll
-        data-scroll-speed={3}
-        className="h-screen bg-dark flex flex-col justify-center items-center z-10 sm:h-[50vh]"
+        // data-scroll
+        data-scroll-section
+        // data-scroll-speed={3}
+        className="h-screen bg-[#000405] flex flex-col justify-center items-center z-10 sm:h-[50vh]"
       >
         <div className="noise"></div>
         <div className="hidden-item relative invisible w-[1000px] lg:w-full m-auto">

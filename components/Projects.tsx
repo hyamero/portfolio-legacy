@@ -28,7 +28,7 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
         data-scroll-target="#projects"
         className="stroke-text z-[3] max-w-[1920px] mix-blend-exclusion absolute top-0 h-[110vh] sm:h-[50vh]"
       ></div>
-      <div className="z-[-2] w-[160vw] bg-dark text-white font-helvetica uppercase rotate-[-15deg] py-2 absolute top-[10%] -left-50 text-6xl whitespace-nowrap md:text-3xl -skew-y-6">
+      {/* <div className="z-[-2] w-[160vw] bg-dark text-white font-helvetica uppercase rotate-[-15deg] py-2 absolute top-[10%] -left-50 text-6xl whitespace-nowrap md:text-3xl -skew-y-6">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto,
         ipsa? Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </div>
@@ -39,7 +39,7 @@ export const Projects: React.FC<ProjectsProps> = ({}) => {
       <div className="z-[-2] w-[160vw] bg-dark text-white font-helvetica uppercase rotate-[-30deg] py-2 absolute top-[70%] -left-30 text-6xl whitespace-nowrap md:text-3xl -skew-y-6">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto,
         ipsa? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </div>
+      </div> */}
       {projects.map((project: any, i: number) => (
         <a
           data-scroll

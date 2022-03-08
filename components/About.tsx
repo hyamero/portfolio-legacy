@@ -1,19 +1,15 @@
 import React from "react";
-import { useGlobal } from "../utilities/GlobalContext";
 import { Marquee } from "./Marquee";
-import flower from "../public/img/flower-morales.jpg";
 
 interface AboutProps {}
 
 export const About: React.FC<AboutProps> = ({}) => {
-  const { aboutRef } = useGlobal();
   const image =
     "https://images.unsplash.com/photo-1615840788094-a4df00dce64b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80";
 
   return (
     <section
       data-scroll-section
-      ref={aboutRef}
       id="about"
       className="px-[200px] lg:px-[50px] max-w-[1920px] mx-auto min-h-[105vh] bg-black font-helvetica relative overflow-hidden sm:block sm:min-h-[75vh]"
     >
