@@ -19,7 +19,7 @@ const Heading: React.FC<HeadingProps> = ({ loaderComplete }) => {
         .to(
           ".hidden-item",
           {
-            css: { visibility: "visible" },
+            css: { visibility: "visible", overflow: "visible" },
           },
           "-=1"
         )
@@ -45,13 +45,11 @@ const Heading: React.FC<HeadingProps> = ({ loaderComplete }) => {
     <>
       <header
         id="home"
-        // data-scroll
         data-scroll-section
-        // data-scroll-speed={3}
         className="h-screen bg-[#000405] flex flex-col justify-center items-center z-10 sm:h-[50vh]"
       >
-        <div className="noise"></div>
-        <div className="hidden-item relative invisible w-[1000px] lg:w-full m-auto">
+        <div className="noise" />
+        <div className="hidden-item invisible overflow-hidden relative w-[1000px] lg:w-full m-auto">
           <p className="show-anim layer sub-text mr-auto  absolute -top-4 left-[8rem] overflow-hidden opacity-0">
             HI, I&apos;M DALE BAÑARES
           </p>

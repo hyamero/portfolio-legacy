@@ -8,10 +8,12 @@ const welcomeScreen = gsap.timeline({
 });
 
 interface LoaderProps {
-  setLoaderComplete: React.Dispatch<React.SetStateAction<boolean>>;
+  // setLoaderComplete: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const Loader: React.FC<LoaderProps> = ({ setLoaderComplete }) => {
+export const Loader: React.FC<LoaderProps> = ({}) => {
+  const { loaderComplete, setLoaderComplete } = useGlobal();
+
   useEffect(() => {
     if (typeof window === "undefined") {
       return;

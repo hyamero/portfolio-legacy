@@ -1,7 +1,9 @@
-import React, { useRef, useContext, createContext } from "react";
+import React, { useRef, useContext, createContext, useState } from "react";
 
 interface GlobalContextProps {
   aboutRef: React.RefObject<HTMLDivElement>;
+  loaderComplete: boolean;
+  setLoaderComplete: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const GlobalContext = createContext<GlobalContextProps>(
@@ -10,9 +12,12 @@ const GlobalContext = createContext<GlobalContextProps>(
 
 const GlobalContextProvider: React.FC = ({ children }) => {
   const aboutRef = useRef<HTMLDivElement>(null);
+  const [loaderComplete, setLoaderComplete] = useState<boolean>(false);
 
   return (
-    <GlobalContext.Provider value={{ aboutRef }}>
+    <GlobalContext.Provider
+      value={{ aboutRef, loaderComplete, setLoaderComplete }}
+    >
       {children}
     </GlobalContext.Provider>
   );

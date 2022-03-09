@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { Navbar } from "./Navbar";
-// import LocomotiveScroll from 'locomotive-scroll'
 import "../node_modules/locomotive-scroll/dist/locomotive-scroll.css";
+import { useGlobal } from "../utilities/GlobalContext";
+import { Loader } from "./Loader";
 
 const debounce = (fn: any, ms: number) => {
   let timer: any;
@@ -17,6 +18,7 @@ const debounce = (fn: any, ms: number) => {
 interface LayoutProps {}
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const { loaderComplete } = useGlobal();
   const scrollRef = useRef<any>(null);
 
   useEffect(() => {
@@ -35,6 +37,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <>
+      {!loaderComplete && <Loader />}
       <main
         ref={scrollRef}
         data-scroll-container

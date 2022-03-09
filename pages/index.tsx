@@ -8,9 +8,10 @@ import { About } from "../components/About";
 import { Projects } from "../components/Projects";
 import { Footer } from "../components/Footer";
 import { Loader } from "../components/Loader";
+import { useGlobal } from "../utilities/GlobalContext";
 
 const Home: NextPage = () => {
-  const [loaderComplete, setLoaderComplete] = useState<boolean>(false);
+  const { loaderComplete, setLoaderComplete } = useGlobal();
 
   return (
     <div className="h-[100%] w-[100%]">
@@ -21,7 +22,6 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        {!loaderComplete && <Loader setLoaderComplete={setLoaderComplete} />}
         <Heading loaderComplete={loaderComplete} />
         <About />
         <Projects />
