@@ -46,10 +46,10 @@ const Heading: React.FC<HeadingProps> = ({ loaderComplete }) => {
       <header
         id="home"
         data-scroll-section
-        className="h-screen bg-[#000405] flex flex-col justify-center items-center z-10 sm:h-[50vh]"
+        className="h-screen bg-[#000405] flex flex-col justify-center items-center z-10"
       >
         <div className="noise" />
-        <div className="hidden-item invisible overflow-hidden relative w-[1000px] lg:w-full m-auto">
+        <div className="hidden-item invisible  relative w-[1000px] lg:w-full m-auto">
           <p className="show-anim layer sub-text mr-auto  absolute -top-4 left-[8rem] overflow-hidden opacity-0">
             HI, I&apos;M DALE BAÑARES
           </p>
@@ -74,7 +74,11 @@ const Heading: React.FC<HeadingProps> = ({ loaderComplete }) => {
             FRONT-END DEVELOPER <br /> AND UI/UX DESIGNER, <br /> FULL-STACK
             CAPABLE
           </p>
-          <div className="cursor-pointer show-anim opacity-0 absolute left-1/2 -bottom-52 sm:-bottom-20">
+          <div
+            data-scroll
+            data-scroll-speed={-2}
+            className="cursor-pointer show-anim opacity-0 absolute left-1/2 -bottom-52 sm:-bottom-20"
+          >
             <a href="#about" data-scroll-to>
               <CgMouse className="text-white/75 text-2xl relative -left-4 md:text-base" />
             </a>

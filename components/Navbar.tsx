@@ -29,7 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
       <div className="font-helvetica text-white flex justify-between">
         <a
           data-scroll-to
-          className="md:text-xs tracking-widest cursor-pointer font-sprat italic font-normal"
+          className="h-[1rem] md:text-xs tracking-widest cursor-pointer font-sprat italic font-normal"
           href="#home"
         >
           DALE B.

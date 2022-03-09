@@ -8,14 +8,29 @@ import {
 interface FooterProps {}
 
 export const Footer: React.FC<FooterProps> = ({}) => {
+  const icons = [
+    {
+      link: "https://github.com/hyamero",
+      component: <AiOutlineGithub />,
+    },
+    {
+      link: "https://www.instagram.com/dale.hyamero/",
+      component: <AiOutlineInstagram />,
+    },
+    {
+      link: "https://www.linkedin.com/in/daleban/",
+      component: <AiOutlineLinkedin />,
+    },
+  ];
+
   return (
-    <div
-      id="contact"
+    <footer
       data-scroll-section
-      className="h-screen bg-dark flex flex-col justify-center items-center max-w-[1920px]"
+      className="h-[110vh] bg-dark flex flex-col justify-center items-center max-w-[1920px]"
     >
       <div className="font-helvetica font-normal text-center text-white text-clamp whitespace-nowrap borderline py-8  border-t border-b w-[80vw] max-w-[1440px]">
         <div
+          id="contact"
           data-scroll
           data-scroll-speed={2}
           className="hover-effect leading-none"
@@ -23,37 +38,25 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           <a href="mailto:daleban.alt@gmail.com">GET IN TOUCH</a>
         </div>
       </div>
-      <footer className="absolute bottom-0 w-full py-8 px-[90px] flex justify-between items-center sm:flex-col sm:space-y-2">
-        <p className="text-center text-white text-sm tracking-wider font-helvetica sm:text-xs">
-          &copy;2022 | DALE BAN.
+      <div className="absolute bottom-0 w-full py-8 px-[90px] lg:px-[70px] flex justify-between items-center flex-col space-y-2">
+        <p className="text-center text-white text-sm tracking-wider font-playfair sm:text-xs ">
+          &copy; <span className="text-[1.1rem]">2022</span> DALE B. <br />
+          <span className="italic">All Rights Reserved.</span>
         </p>
-        <ul className="text-white flex space-x-6 text-[1.4rem]">
-          <li>
-            <a
-              href="https://github.com/hyamero"
-              className="hover:text-gray-300 transition-colors"
-            >
-              <AiOutlineGithub />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/dale.hyamero/"
-              className="hover:text-gray-300 transition-colors"
-            >
-              <AiOutlineInstagram />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/daleban/"
-              className="hover:text-gray-300 transition-colors"
-            >
-              <AiOutlineLinkedin />
-            </a>
-          </li>
+        <ul className="text-white flex space-x-6 text-[1.4rem] sm:text-[1.2rem]">
+          {icons.map((icon) => (
+            <li>
+              <a
+                key={icon.link}
+                href={icon.link}
+                className="hover:text-gray-300 transition-colors"
+              >
+                {icon.component}
+              </a>
+            </li>
+          ))}
         </ul>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 };
