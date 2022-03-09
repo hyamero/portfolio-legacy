@@ -74,26 +74,26 @@ export const Loader: React.FC = ({}) => {
 
   return (
     <>
-      <div className="loading-screen absolute z-[13] w-full h-screen bg-black text-white overflow-hidden">
-        <div className="loading-section absolute flex w-full h-screen items-center justify-center">
-          <div className="title mx-5 text-3xl font-playfair italic font-medium tracking-wider">
+      <div className="loading-screen absolute z-[13] h-screen w-full overflow-hidden bg-black text-white">
+        <div className="loading-section absolute flex h-screen w-full items-center justify-center">
+          <div className="title mx-5 font-playfair text-3xl font-medium italic tracking-wider">
             Dale
           </div>
-          <div className="bracket bracket1 text-2xl font-playfair scale-50">
+          <div className="bracket bracket1 scale-50 font-playfair text-2xl">
             (&nbsp;
           </div>
-          <div id="loader" className="text-2xl font-sprat font-medium">
+          <div id="loader" className="font-sprat text-2xl font-medium">
             {time}%
           </div>
-          <div className="bracket bracket2 text-2xl font-playfair scale-50">
+          <div className="bracket bracket2 scale-50 font-playfair text-2xl">
             &nbsp;)
           </div>
-          <div className="title mx-5 text-3xl font-playfair italic font-medium tracking-wider">
+          <div className="title mx-5 font-playfair text-3xl font-medium italic tracking-wider">
             Bañares
           </div>
         </div>
       </div>
-      <div className="after-block absolute z-10 w-full h-screen bg-ylw-200"></div>
+      <div className="after-block absolute z-10 h-screen w-full bg-ylw-200"></div>
     </>
   );
 };

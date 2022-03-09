@@ -28,7 +28,7 @@ export const Layout: React.FC = ({ children }) => {
       <main
         ref={scrollRef}
         data-scroll-container
-        className="max-w-[1920px] m-auto fixed left-0 right-0"
+        className="fixed left-0 right-0 m-auto max-w-[1920px]"
       >
         <Navbar />
         {children}

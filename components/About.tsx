@@ -11,21 +11,21 @@ export const About: React.FC<AboutProps> = ({}) => {
     <section
       data-scroll-section
       id="about"
-      className="px-[200px] lg:px-[50px] max-w-[1920px] mx-auto min-h-[105vh] bg-black font-helvetica relative overflow-hidden sm:block sm:min-h-[75vh]"
+      className="relative mx-auto min-h-[105vh] max-w-[1920px] overflow-hidden bg-black px-[200px] font-helvetica sm:block sm:min-h-[75vh] lg:px-[50px]"
     >
-      <h4 className="z-10 relative borderline w-[100%] mx-[auto] pt-24 md:pt-10 md:text-xs sm:mb-20 pb-14 sm:pb-5  tracking-wider">
+      <h4 className="borderline relative z-10 mx-[auto] w-[100%] pt-24 pb-14 tracking-wider sm:mb-20 sm:pb-5 md:pt-10  md:text-xs">
         ABOUT
       </h4>
       <div className="w-[70%] sm:w-full">
-        <div className="z-10 relative about-text flex flex-col items-between justify-center gap-10 sm:gap-0">
-          <h2 className="sub-text whitespace-nowrap text-ylw-100 text-left text-base uppercase sm:text-xs sm:text-left mt-20 sm:mt-0 sm:mb-0 sm:-translate-y-1/2 ">
+        <div className="about-text items-between relative z-10 flex flex-col justify-center gap-10 sm:gap-0">
+          <h2 className="sub-text mt-20 whitespace-nowrap text-left text-base uppercase text-ylw-100 sm:mt-0 sm:mb-0 sm:-translate-y-1/2 sm:text-left sm:text-xs ">
             {" "}
             <span className="text-sub"> Hey, I&apos;m</span> <br />
-            <span className="font-sprat text-4xl sm:text-2xl font-normal text-ylw-200">
+            <span className="font-sprat text-4xl font-normal text-ylw-200 sm:text-2xl">
               Joseph Dale Bañares
             </span>
           </h2>
-          <p className="sub-text whitespace-normal text-ylw-100 text-left uppercase mb-20 sm:text-xs sm:text-left sm:mt-0 sm:mb-10 w-[80%] md:mb-10 sub-text">
+          <p className="sub-text sub-text mb-20 w-[80%] whitespace-normal text-left uppercase text-ylw-100 sm:mt-0 sm:mb-10 sm:text-left sm:text-xs md:mb-10">
             I&apos;m an eighteen year old front-end web developer based in
             Bacolod City, Philippines. I specialize in creative development and
             I love creating interactive websites. I mainly use react,
@@ -38,11 +38,11 @@ export const About: React.FC<AboutProps> = ({}) => {
             data-scroll
             data-scroll-delay={1}
             href="#contact"
-            className="uppercase rounded-[100%] border-[0.5px] border-white text-white text-xs md:text-[0.6rem] w-40 h-40 md:w-28 md:h-28 mx-auto text-center flex justify-center items-center tracking-widest transition-all mix-blend-difference mb-20"
+            className="mx-auto mb-20 flex h-40 w-40 items-center justify-center rounded-[100%] border-[0.5px] border-white text-center text-xs uppercase tracking-widest text-white mix-blend-difference transition-all md:h-28 md:w-28 md:text-[0.6rem]"
           >
             contact
           </a>
-          <div className="space bg-none h-80 lg:h-52"></div>
+          <div className="space h-80 bg-none lg:h-52"></div>
         </div>
       </div>
       <img
@@ -50,7 +50,7 @@ export const About: React.FC<AboutProps> = ({}) => {
         data-scroll-speed={2}
         src={image}
         alt="image by Jocelyn Morales"
-        className="z-[9] w-[38rem] sm:w-[20rem] rounded-tr-full rounded-tl-full -bottom-36 sm:-bottom-24 absolute right-0"
+        className="absolute -bottom-36 right-0 z-[9] w-[38rem] rounded-tr-full rounded-tl-full sm:-bottom-24 sm:w-[20rem]"
       />
       <div className="absolute bottom-0 -left-40">
         <Marquee />

@@ -21,16 +21,16 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
   }, []);
 
   return (
-    <nav className="container max-w-[1920px] fixed top-0 center mt-12 mx-auto px-20 lg:px-10 z-10 mix-blend-difference">
-      <div className="font-helvetica text-white flex justify-between">
+    <nav className="center container fixed top-0 z-10 mx-auto mt-12 max-w-[1920px] px-20 mix-blend-difference lg:px-10">
+      <div className="flex justify-between font-helvetica text-white">
         <a
           data-scroll-to
-          className="h-[1rem] md:text-xs tracking-widest cursor-pointer font-sprat italic font-normal"
+          className="h-[1rem] cursor-pointer font-sprat font-normal italic tracking-widest md:text-xs"
           href="#home"
         >
           DALE B.
         </a>
-        <div className=" menu flex flex-col justify-center items-left text-sm tracking-wider sm:text-[0.6rem] sm:leading-3  space-y-[0.15rem] text-left">
+        <div className=" menu items-left flex flex-col justify-center space-y-[0.15rem] text-left text-sm tracking-wider  sm:text-[0.6rem] sm:leading-3">
           <NavBtns />
         </div>
       </div>

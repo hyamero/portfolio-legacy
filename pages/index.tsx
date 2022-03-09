@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   const { loaderComplete } = useGlobal();
 
   return (
-    <div className="h-[100%] w-[100%]">
+    <div className="h-full w-full">
       <Head>
         <title>Dale Bañares</title>
         <meta name="description" content="Dale Bañares Portfolio" />

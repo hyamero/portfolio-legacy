@@ -7,9 +7,9 @@ export const Projects: React.FC = ({}) => {
     <section
       data-scroll-section
       id="projects"
-      className=" min-h-[200vh] py-[300px] md:py-[50px] flex flex-col justify-between gap-96 sm:gap-20 items-center px-10 relative bg-white z-[8]"
+      className=" relative z-[8] flex min-h-[200vh] flex-col items-center justify-between gap-96 bg-white py-[300px] px-10 sm:gap-20 md:py-[50px]"
     >
-      <p className="absolute top-3 left-3 text-sub sub-text font-helvetica whitespace-normal">
+      <p className="sub-text absolute top-3 left-3 whitespace-normal font-helvetica text-sub">
         NOTE FOR THE FOLLOWING PROJECTS: I MADE THESE PROJECTS WHEN I WAS JUST
         BEGINNER WEB DEVELOPER. I WILL START MAKING PROJECTS WORTHY OF
         SHOWCASING HERE SOON. PEACE!
@@ -18,13 +18,13 @@ export const Projects: React.FC = ({}) => {
         data-scroll
         data-scroll-sticky
         data-scroll-target="#projects"
-        className="filled-text z-[-1] max-w-[1920px] absolute top-0 h-[110vh] sm:h-[50vh]"
+        className="filled-text absolute top-0 z-[-1] h-[110vh] max-w-[1920px] sm:h-[50vh]"
       ></div>
       <div
         data-scroll
         data-scroll-sticky
         data-scroll-target="#projects"
-        className="stroke-text z-[3] max-w-[1920px] mix-blend-exclusion absolute top-0 h-[110vh] sm:h-[50vh]"
+        className="stroke-text absolute top-0 z-[3] h-[110vh] max-w-[1920px] mix-blend-exclusion sm:h-[50vh]"
       ></div>
       {projects.map((project: any, i: number) => (
         <a
@@ -32,7 +32,7 @@ export const Projects: React.FC = ({}) => {
           data-scroll-direction="horizontal"
           data-scroll-speed={1 + i}
           key={i}
-          className="cursor-pointer z-[2] overflow-hidden clip-0 img"
+          className="clip-0 img z-[2] cursor-pointer overflow-hidden"
           href={project.link}
           target="_blank"
           rel="noreferrer"
