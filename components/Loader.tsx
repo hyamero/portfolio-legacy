@@ -7,12 +7,8 @@ const welcomeScreen = gsap.timeline({
   paused: true,
 });
 
-interface LoaderProps {
-  // setLoaderComplete: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-export const Loader: React.FC<LoaderProps> = ({}) => {
-  const { loaderComplete, setLoaderComplete } = useGlobal();
+export const Loader: React.FC = ({}) => {
+  const { setLoaderComplete } = useGlobal();
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -96,10 +92,6 @@ export const Loader: React.FC<LoaderProps> = ({}) => {
             Bañares
           </div>
         </div>
-        {/* <div className="bottom-section w-screen text-xs text-center absolute bottom-0 left-0 font-helvetica uppercase tracking">
-          <div className="bottom-line">Dale B. Portfolio 2022&#169;.</div>
-          <div className="bottom-line">All Rights Reserved</div>
-        </div> */}
       </div>
       <div className="after-block absolute z-10 w-full h-screen bg-ylw-200"></div>
     </>

@@ -35,7 +35,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           data-scroll-speed={2}
           className="hover-effect leading-none"
         >
-          <a href="mailto:daleban.alt@gmail.com">GET IN TOUCH</a>
+          <a href="mailto:daleban.dev@gmail.com">GET IN TOUCH</a>
         </div>
       </div>
       <div className="absolute bottom-0 w-full py-8 px-[90px] lg:px-[70px] flex justify-between items-center flex-col space-y-2">
@@ -45,9 +45,8 @@ export const Footer: React.FC<FooterProps> = ({}) => {
         </p>
         <ul className="text-white flex space-x-6 text-[1.4rem] sm:text-[1.2rem]">
           {icons.map((icon) => (
-            <li>
+            <li key={icon.link}>
               <a
-                key={icon.link}
                 href={icon.link}
                 className="hover:text-gray-300 transition-colors"
               >

@@ -1,9 +1,5 @@
 import React, { useEffect } from "react";
 
-const slideDown = {
-  hidden: {},
-};
-
 interface NavbarProps {}
 
 export const Navbar: React.FC<NavbarProps> = ({}) => {

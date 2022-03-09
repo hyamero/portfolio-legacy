@@ -4,20 +4,7 @@ import "../node_modules/locomotive-scroll/dist/locomotive-scroll.css";
 import { useGlobal } from "../utilities/GlobalContext";
 import { Loader } from "./Loader";
 
-const debounce = (fn: any, ms: number) => {
-  let timer: any;
-  return () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      timer = null;
-      fn.apply(this);
-    }, ms);
-  };
-};
-
-interface LayoutProps {}
-
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
+export const Layout: React.FC = ({ children }) => {
   const { loaderComplete } = useGlobal();
   const scrollRef = useRef<any>(null);
 

@@ -1,0 +1,37 @@
+export const codeTechs = [
+  // " ",
+  "react",
+  "typscript",
+  "tailwind",
+  "three.js",
+  "react",
+  // "typscript",
+  // "tailwind",
+  // "react",
+  // "next.js",
+  // "webgl",
+  // "three.js",
+  // "typscript",
+  // "tailwind",
+  // "next.js",
+  // "webgl",
+  // "three.js",
+  // " "
+];
+
+export const designTechs = [
+  " ",
+  "figma",
+  "photoshop",
+  "blender",
+  "premiere pro",
+  // "figma",
+  // "photoshop",
+  // "premiere pro",
+  // "blender",
+  // "figma",
+  // "photoshop",
+  // "premiere pro",
+  // "blender",
+  // " ",
+];

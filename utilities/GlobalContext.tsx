@@ -29,13 +29,3 @@ const useGlobal = () => {
 };
 
 export { GlobalContextProvider, useGlobal };
-
-// export const UserContext = createContext<GlobalContextProps>({} as GlobalContextProps);
-
-// export const UserProvider = () => {
-//   return (
-//     <UserContext.Provider>
-
-//     </UserContext.Provider>
-//   )
-// }
