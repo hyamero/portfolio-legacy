@@ -50,7 +50,7 @@ const Heading: React.FC<HeadingProps> = ({ loaderComplete }) => {
       >
         <div className="noise" />
         <div className="hidden-item invisible  relative m-auto w-[1000px] lg:w-full">
-          <p className="show-anim layer sub-text absolute  -top-4 left-[8rem] mr-auto overflow-hidden opacity-0">
+          <p className="show-anim layer sub-text absolute -top-4 left-[8rem] mr-auto overflow-hidden opacity-0">
             HI, I&apos;M DALE BAÑARES
           </p>
           <h1>
