@@ -40,7 +40,8 @@ export const Footer: React.FC<FooterProps> = ({}) => {
       </div>
       <div className="absolute bottom-0 flex w-full flex-col items-center justify-between space-y-2 py-8 px-[90px] lg:px-[70px]">
         <p className="text-center font-playfair text-sm tracking-wider text-white sm:text-xs ">
-          &copy; <span className="text-[1.1rem]">2022</span> DALE B. <br />
+          &copy; <span className="text-[1.1rem] sm:text-xs">2022</span> DALE B.{" "}
+          <br />
           <span className="italic">All Rights Reserved.</span>
         </p>
         <ul className="flex space-x-6 text-[1.4rem] text-white sm:text-[1.2rem]">

@@ -21,7 +21,7 @@ export const About: React.FC<AboutProps> = ({}) => {
           <h2 className="sub-text mt-20 whitespace-nowrap text-left text-base uppercase text-ylw-100 sm:mt-0 sm:mb-0 sm:-translate-y-1/2 sm:text-left sm:text-xs ">
             {" "}
             <span className="text-sub"> Hey, I&apos;m</span> <br />
-            <span className="font-sprat text-4xl font-normal text-ylw-200 sm:text-2xl">
+            <span className="font-sprat text-4xl font-medium text-ylw-200 sm:text-2xl">
               Joseph Dale Bañares
             </span>
           </h2>

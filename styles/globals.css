@@ -6,31 +6,31 @@
 
 @layer components {
   .container {
-    @apply max-w-[1920px] m-auto px-[200px] lg:p-0;
+    @apply m-auto max-w-[1920px] px-[200px] lg:p-0;
   }
 
   .header-text {
-    @apply font-sprat font-medium text-ylw-100 whitespace-nowrap leading-none;
+    @apply whitespace-nowrap font-sprat font-medium leading-none text-ylw-100;
   }
 
   .header-text span {
-    @apply font-semibold text-transparent;
+    @apply font-bold text-transparent;
     background-image: linear-gradient(#ffb64b, #f59e1c);
     background-clip: text;
   }
 
   .sub-text {
-    @apply text-sub whitespace-nowrap font-helvetica;
+    @apply whitespace-nowrap font-helvetica text-sub;
     font-size: clamp(0.01rem, 1.6vw, 1rem);
   }
 
   .tech-text {
-    @apply flex justify-between text-light uppercase whitespace-nowrap;
+    @apply flex justify-between whitespace-nowrap uppercase text-light;
     font-size: clamp(1.5rem, 4vw, 3.75rem);
   }
 
   .borderline {
-    @apply text-light border-b-[1px] border-[#353535] text-center;
+    @apply border-b-[1px] border-[#353535] text-center text-light;
   }
 }
 
@@ -163,13 +163,13 @@ html {
 @font-face {
   font-family: helvetica;
   src: url("../public/fonts/HelveticaNeueMediumExtended.otf");
-  font-weight: medium;
+  font-weight: 500;
 }
 
 @font-face {
   font-family: druk;
   src: url("../public/fonts/Druk-Wide-Bold.otf");
-  font-weight: bold;
+  font-weight: 700;
 }
 
 @font-face {
@@ -182,16 +182,4 @@ html {
   font-family: sprat;
   src: url("../public/fonts/Sprat-RegularBold.otf");
   font-weight: 700;
-}
-
-@font-face {
-  font-family: sprat;
-  src: url("../public/fonts/Sprat-RegularBlack.otf");
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: sprat;
-  src: url("../public/fonts/Sprat-ExtendedBlack.otf");
-  font-weight: 900;
 }
