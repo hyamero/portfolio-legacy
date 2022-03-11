@@ -26,22 +26,28 @@ export const Footer: React.FC<FooterProps> = ({}) => {
   return (
     <footer
       data-scroll-section
-      className="flex h-[110vh] max-w-[1920px] flex-col items-center justify-center bg-dark"
+      className="relative flex h-[110vh] max-w-[1920px] flex-col items-center justify-center bg-dark px-[200px] lg:px-[50px]"
     >
-      <div className="text-clamp borderline w-[80vw] max-w-[1440px] whitespace-nowrap border-t border-b py-8  text-center font-helvetica font-normal text-white">
+      <div className="relative w-[80vw]  max-w-[1440px]  whitespace-nowrap py-8 text-center font-normal text-white">
+        <h4 className="mx-[auto] pb-14 font-helvetica tracking-wider sm:pb-7 md:text-xs">
+          GET IN TOUCH
+        </h4>
         <div
           id="contact"
-          data-scroll
-          data-scroll-speed={2}
-          className="hover-effect leading-none"
+          className="hover-effect text-clamp borderline border-t py-8 font-playfair italic leading-none"
         >
-          <a href="mailto:daleban.dev@gmail.com">GET IN TOUCH</a>
+          <a
+            data-scroll
+            data-scroll-speed={2}
+            href="mailto:hyamero@daleban.tech"
+          >
+            hyamero@daleban.tech
+          </a>
         </div>
       </div>
-      <div className="absolute bottom-0 flex w-full flex-col items-center justify-between space-y-2 py-8 px-[90px] lg:px-[70px]">
+      <div className="relative top-[5vh] flex origin-bottom-left  flex-col items-center space-y-2 px-[90px] pb-8 lg:px-[70px]">
         <p className="text-center font-playfair text-sm tracking-wider text-white sm:text-xs ">
           &copy; <span className="text-[1.1rem] sm:text-xs">2022</span> DALE B.{" "}
-          <br />
           <span className="italic">All Rights Reserved.</span>
         </p>
         <ul className="flex space-x-6 text-[1.4rem] text-white sm:text-[1.2rem]">

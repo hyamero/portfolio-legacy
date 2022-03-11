@@ -9,11 +9,6 @@ export const Projects: React.FC = ({}) => {
       id="projects"
       className=" relative z-[8] flex min-h-[200vh] flex-col items-center justify-between gap-96 bg-white py-[300px] px-10 sm:gap-20 md:py-[50px]"
     >
-      <p className="sub-text absolute top-3 left-3 whitespace-normal font-helvetica text-sub">
-        NOTE FOR THE FOLLOWING PROJECTS: I MADE THESE PROJECTS WHEN I WAS JUST
-        BEGINNER WEB DEVELOPER. I WILL START MAKING PROJECTS WORTHY OF
-        SHOWCASING HERE SOON. PEACE!
-      </p>
       <div
         data-scroll
         data-scroll-sticky
@@ -30,7 +25,7 @@ export const Projects: React.FC = ({}) => {
         <a
           data-scroll
           data-scroll-direction="horizontal"
-          data-scroll-speed={1 + i}
+          data-scroll-speed={5 + i}
           key={i}
           className="clip-0 img z-[2] cursor-pointer overflow-hidden"
           href={project.link}
