@@ -48,7 +48,6 @@ const Heading: React.FC<HeadingProps> = ({ loaderComplete }) => {
         data-scroll-section
         className="z-10 flex h-screen flex-col items-center justify-center bg-[#000405]"
       >
-        <div className="noise" />
         <div className="hidden-item invisible  relative m-auto w-[1000px] lg:w-full">
           <p className="show-anim layer sub-text absolute -top-4 left-[8rem] mr-auto overflow-hidden opacity-0">
             HI, I&apos;M DALE BAÑARES

@@ -82,20 +82,6 @@ html {
   pointer-events: none;
 }
 
-.noise::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  content: "";
-  /* you can control opacity of noise  */
-  opacity: 0.03;
-  z-index: 12;
-  pointer-events: none;
-  background: url(../public/img/noise.gif);
-}
-
 .hover-effect a {
   cursor: pointer;
   position: relative;
