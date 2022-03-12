@@ -1,7 +1,8 @@
 const description =
-  "A front-end web developer based in the Philippines. He specializes in creative development, using modern technologies to create interactive and responsive websites.";
+  "Front-end developer based in the Philippines. A creative developer with a passion for building beautiful and interactive websites.";
 
-const imgUrl = "https://photos.app.goo.gl/b2Y8kbjqr7pu8UAu9";
+const imgUrl =
+  "https://raw.githubusercontent.com/hyamero/portfolio/dev/public/img/Footer.png";
 
 export default {
   title: "Joseph Dale Bañares - Creative Developer",
@@ -9,7 +10,7 @@ export default {
   openGraph: {
     type: "website",
     url: "https://daleban.tech",
-    title: "Joseph Dale Bañares - Creative Developer",
+    title: "Dale Bañares - Creative Developer",
     description,
     images: [
       {
@@ -30,7 +31,7 @@ export default {
         url: imgUrl,
       },
     ],
-    site_name: "Joseph Dale Bañares - Creative Developer",
+    site_name: "Joseph Dale Bañares",
   },
   twitter: {
     cardType: "summary_large_image",
