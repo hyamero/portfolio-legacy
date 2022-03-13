@@ -7,8 +7,15 @@ export const Projects: React.FC = ({}) => {
     <section
       data-scroll-section
       id="projects"
-      className=" relative z-[8] flex min-h-[200vh] flex-col items-center justify-between gap-96 overflow-hidden bg-white py-[300px] px-10 sm:gap-20 md:py-[50px]"
+      className=" relative z-[8] flex min-h-[200vh] flex-col items-center justify-between gap-96 overflow-hidden bg-white px-10 pt-[500px] pb-[300px] sm:gap-36 sm:py-[200px]"
     >
+      <h3
+        data-scroll
+        data-scroll-speed={-3}
+        className="absolute top-[-10rem] font-playfair text-[15vw] font-medium italic text-black/25 sm:-top-20"
+      >
+        Projects
+      </h3>
       {projects.map((project: any, i: number) => (
         <>
           <span
@@ -21,6 +28,8 @@ export const Projects: React.FC = ({}) => {
             {project.title} <span className="relative top-3">*</span>{" "}
             {project.title}{" "}
             <span className="relative top-3 animate-spin">*</span>{" "}
+            {project.title} <span className="relative top-3">*</span>{" "}
+            {project.title} <span className="relative top-3">*</span>{" "}
             {project.title} <span className="relative top-3">*</span>{" "}
             {project.title} <span className="relative top-3">*</span>
           </span>
@@ -45,14 +54,6 @@ export const Projects: React.FC = ({}) => {
                 placeholder="blur"
                 className="z-[9] rounded"
               />
-              <span
-                data-scroll
-                data-scroll-speed={2}
-                data-scroll-direction="horizontal"
-                className="absolute left-0 top-1/2 z-[9] font-playfair text-9xl italic text-black mix-blend-exclusion"
-              >
-                0{i + 1}
-              </span>
               <span
                 data-scroll
                 data-scroll-speed={-2}
