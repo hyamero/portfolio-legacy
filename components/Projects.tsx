@@ -9,34 +9,11 @@ export const Projects: React.FC = ({}) => {
       id="projects"
       className=" relative z-[8] flex min-h-[200vh] flex-col items-center justify-between gap-96 overflow-hidden bg-white py-[300px] px-10 sm:gap-20 md:py-[50px]"
     >
-      {/* <div
-        data-scroll
-        data-scroll-sticky
-        data-scroll-target="#projects"
-        className="filled-text absolute top-0 z-[-1] h-[110vh] max-w-[1920px] sm:h-[50vh]"
-      />
-      <div
-        data-scroll
-        data-scroll-sticky
-        data-scroll-target="#projects"
-        className="stroke-text absolute top-0 z-[3] h-[110vh] max-w-[1920px] mix-blend-exclusion sm:h-[50vh]"
-      /> */}
-
-      {/* <span
-        data-scroll
-        data-scroll-speed={-2}
-        data-scroll-direction="horizontal"
-        className="relative z-[3] whitespace-nowrap font-playfair text-9xl italic text-black/25"
-      >
-        projects <span>*</span> projects <span>*</span> projects <span>*</span>{" "}
-        projects <span>*</span> projects <span>*</span>
-      </span> */}
-
       {projects.map((project: any, i: number) => (
         <>
           <span
             data-scroll
-            data-scroll-speed={-2}
+            data-scroll-speed={7 + i}
             data-scroll-direction="horizontal"
             className="text-clamp pointer-events-none relative z-[3] select-none whitespace-nowrap font-playfair text-9xl italic text-black/25"
           >
@@ -50,19 +27,14 @@ export const Projects: React.FC = ({}) => {
           <a
             data-scroll
             data-scroll-direction="horizontal"
-            data-scroll-speed={5 + i}
+            data-scroll-speed={7 + i}
             key={i}
-            className="clip-0 img cursor-pointer overflow-visible"
+            className="clip-0 img cursor-pointer overflow-hidden"
             href={project.link}
             target="_blank"
             rel="noreferrer"
           >
-            <div
-              data-scroll
-              data-scroll-speed={2}
-              data-scroll-delay={1}
-              className="relative"
-            >
+            <div data-scroll data-scroll-speed={2} className="relative">
               <Image
                 priority
                 src={project.img}
