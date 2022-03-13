@@ -64,24 +64,6 @@ html {
   background-size: 100% 2px;
 }
 
-.filled-text {
-  width: 100%;
-  background-image: url("../public/img/PROJECTSfilled.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  pointer-events: none;
-}
-
-.stroke-text {
-  width: 100%;
-  background-image: url("../public/img/PROJECTSstroke.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  pointer-events: none;
-}
-
 .hover-effect a {
   cursor: pointer;
   position: relative;
@@ -118,9 +100,6 @@ html {
     right: 7rem;
     bottom: -0.1rem;
   }
-  /* .layer {
-    top: -0.4rem;
-  } */
 }
 @media (max-width: 920px) {
   .sub-sentence {
