@@ -64,24 +64,6 @@ html {
   background-size: 100% 2px;
 }
 
-.filled-text {
-  width: 100%;
-  background-image: url("../public/img/PROJECTSfilled.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  pointer-events: none;
-}
-
-.stroke-text {
-  width: 100%;
-  background-image: url("../public/img/PROJECTSstroke.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  pointer-events: none;
-}
-
 .hover-effect a {
   cursor: pointer;
   position: relative;
@@ -106,7 +88,7 @@ html {
 
 .clip-0 {
   clip-path: inset(50% 0% 0% 0%);
-  transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .img.is-inview {
@@ -118,9 +100,6 @@ html {
     right: 7rem;
     bottom: -0.1rem;
   }
-  /* .layer {
-    top: -0.4rem;
-  } */
 }
 @media (max-width: 920px) {
   .sub-sentence {
