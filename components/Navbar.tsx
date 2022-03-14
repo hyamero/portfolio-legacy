@@ -22,10 +22,10 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
 
   return (
     <nav className="center container fixed top-0 z-10 mx-auto mt-12 max-w-[1920px] px-20 mix-blend-difference lg:px-10">
-      <div className="flex justify-between font-helvetica text-white">
+      <div className="flex justify-between text-white">
         <a
           data-scroll-to
-          className="h-[1rem] cursor-pointer font-sprat font-normal italic tracking-widest md:text-xs"
+          className="h-[1rem] cursor-pointer font-playfair font-normal italic tracking-widest md:text-xs"
           href="#home"
         >
           DALE B.

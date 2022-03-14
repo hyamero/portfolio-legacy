@@ -69,7 +69,7 @@ const Heading: React.FC<HeadingProps> = ({ loaderComplete }) => {
               </span>
             </div>
           </h1>
-          <p className="show-anim sub-text sub-sentence absolute bottom-[1rem] right-16 whitespace-nowrap font-helvetica opacity-0">
+          <p className="show-anim sub-text sub-sentence absolute bottom-[1rem] right-16 whitespace-nowrap opacity-0">
             FRONT-END DEVELOPER <br /> AND UI/UX DESIGNER, <br /> FULL-STACK
             CAPABLE
           </p>

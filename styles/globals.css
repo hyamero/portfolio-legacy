@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -20,7 +21,7 @@
   }
 
   .sub-text {
-    @apply whitespace-nowrap font-helvetica text-sub;
+    @apply whitespace-nowrap font-syne font-bold tracking-wide text-sub;
     font-size: clamp(0.01rem, 1.6vw, 1rem);
   }
 
@@ -123,12 +124,6 @@ html {
 ::selection {
   background: #e4d0b9;
   color: #141414;
-}
-
-@font-face {
-  font-family: helvetica;
-  src: url("../public/fonts/HelveticaNeueMediumExtended.otf");
-  font-weight: 500;
 }
 
 @font-face {
