@@ -7,7 +7,7 @@ export const Projects: React.FC = ({}) => {
     <section
       data-scroll-section
       id="projects"
-      className=" relative z-[8] flex min-h-[200vh] flex-col items-center justify-between gap-96 overflow-hidden bg-white px-10 pt-[500px] pb-[300px] sm:gap-36 sm:py-[200px]"
+      className=" relative z-[8] flex min-h-[200vh] flex-col items-center justify-between gap-96 overflow-hidden bg-white px-10 pt-[500px] pb-[300px] sm:gap-52 sm:py-[200px]"
     >
       <h3
         data-scroll
@@ -48,17 +48,16 @@ export const Projects: React.FC = ({}) => {
                 priority
                 src={project.img}
                 alt={project.title}
-                height={410}
-                width={740}
-                quality={100}
-                placeholder="blur"
+                height={405}
+                width={720}
+                quality={90}
                 className="z-[9] rounded"
               />
               <span
                 data-scroll
                 data-scroll-speed={-2}
                 data-scroll-direction="horizontal"
-                className="text-clamp absolute bottom-5 left-10 z-[10] font-playfair italic text-white mix-blend-difference"
+                className="text-clamp absolute bottom-5 left-20 z-[10] whitespace-nowrap font-playfair italic text-white mix-blend-difference"
               >
                 {project.title}
               </span>

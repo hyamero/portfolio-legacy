@@ -16,10 +16,10 @@ module.exports = {
       },
 
       fontFamily: {
-        helvetica: ["helvetica"],
-        sprat: ["sprat"],
-        druk: ["druk"],
-        playfair: ["Playfair Display, serif"],
+        sprat: ["sprat", "serif"],
+        druk: ["druk", "sans-serif"],
+        playfair: ["Playfair Display", "serif"],
+        syne: ["Syne", "sans-serif"],
       },
 
       screens: {

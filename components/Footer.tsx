@@ -1,25 +1,21 @@
 import React from "react";
-import {
-  AiOutlineLinkedin,
-  AiOutlineGithub,
-  AiOutlineInstagram,
-} from "react-icons/ai";
+import { FiArrowUpRight } from "react-icons/fi";
 
 interface FooterProps {}
 
 export const Footer: React.FC<FooterProps> = ({}) => {
   const icons = [
     {
+      title: "github",
       link: "https://github.com/hyamero",
-      component: <AiOutlineGithub />,
     },
     {
+      title: "instagram",
       link: "https://www.instagram.com/dale.hyamero/",
-      component: <AiOutlineInstagram />,
     },
     {
+      title: "linkedin",
       link: "https://www.linkedin.com/in/daleban/",
-      component: <AiOutlineLinkedin />,
     },
   ];
 
@@ -29,9 +25,9 @@ export const Footer: React.FC<FooterProps> = ({}) => {
       className="relative flex h-[110vh] max-w-[1920px] flex-col items-center justify-center bg-dark px-[200px] lg:px-[50px]"
     >
       <div className="relative w-[80vw]  max-w-[1440px]  whitespace-nowrap py-8 text-center font-normal text-white">
-        <h4 className="mx-[auto] pb-14 font-helvetica tracking-wider sm:pb-7 md:text-xs">
+        <h3 className="mx-[auto] pb-14 font-syne font-bold tracking-wider sm:pb-7 md:text-xs">
           GET IN TOUCH
-        </h4>
+        </h3>
         <div
           id="contact"
           className="hover-effect text-clamp borderline border-t py-8 font-playfair italic leading-none"
@@ -50,14 +46,15 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           &copy; <span className="text-[1.1rem] sm:text-xs">2022</span> DALE B.{" "}
           <span className="italic">All Rights Reserved.</span>
         </p>
-        <ul className="flex space-x-6 text-[1.4rem] text-white sm:text-[1.2rem]">
+        <ul className="flex space-x-6 text-white">
           {icons.map((icon) => (
-            <li key={icon.link}>
+            <li key={icon.link} className="hover-effect-sm">
               <a
                 href={icon.link}
-                className="transition-colors hover:text-gray-300"
+                className="hover-effect whitespace-nowrap font-syne text-xs font-bold uppercase tracking-widest transition-colors hover:text-gray-300 sm:text-[0.6rem]"
               >
-                {icon.component}
+                {icon.title}
+                <FiArrowUpRight className="inline-block" />
               </a>
             </li>
           ))}

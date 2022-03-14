@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -20,7 +21,7 @@
   }
 
   .sub-text {
-    @apply whitespace-nowrap font-helvetica text-sub;
+    @apply whitespace-nowrap font-syne font-bold tracking-wide text-sub;
     font-size: clamp(0.01rem, 1.6vw, 1rem);
   }
 
@@ -86,9 +87,31 @@ html {
   left: 0;
 }
 
+.hover-effect-sm a {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+.hover-effect-sm a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  margin-top: 1px;
+  display: block;
+  right: 0;
+  background: #fdb140;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.hover-effect-sm a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
 .clip-0 {
   clip-path: inset(50% 0% 0% 0%);
-  transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .img.is-inview {
@@ -123,12 +146,6 @@ html {
 ::selection {
   background: #e4d0b9;
   color: #141414;
-}
-
-@font-face {
-  font-family: helvetica;
-  src: url("../public/fonts/HelveticaNeueMediumExtended.otf");
-  font-weight: 500;
 }
 
 @font-face {
