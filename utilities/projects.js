@@ -5,14 +5,14 @@ import haboleon from "../public/img/projects/haboleon.jpg";
 
 export const projects = [
   {
-    title: "Boisson",
-    img: boisson,
-    link: "https://boisson-cocktail.vercel.app/",
-  },
-  {
     title: "Collective Apis",
     img: collectiveApis,
     link: "https://collective-api.vercel.app/",
+  },
+  {
+    title: "Boisson",
+    img: boisson,
+    link: "https://boisson-cocktail.vercel.app/",
   },
   {
     title: "Cayenne",
