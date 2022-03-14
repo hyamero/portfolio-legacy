@@ -21,7 +21,7 @@ export const About: React.FC<AboutProps> = ({}) => {
           <h3 className="sub-text mt-20 whitespace-nowrap text-left text-base text-ylw-100 sm:mt-0 sm:mb-0 sm:-translate-y-1/2 sm:text-left sm:text-xs ">
             {" "}
             <span className="uppercase text-sub"> Hey, I&apos;m</span> <br />
-            <span className="font-sprat text-5xl  font-medium uppercase text-ylw-200 sm:text-3xl ">
+            <span className="font-sprat text-5xl  font-medium uppercase text-ylw-200 sm:text-2xl ">
               Joseph Dale Bañares
             </span>
           </h3>

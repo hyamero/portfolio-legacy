@@ -45,13 +45,12 @@ export const Projects: React.FC = ({}) => {
           >
             <div data-scroll data-scroll-speed={2} className="relative">
               <Image
-                // priority
+                priority
                 src={project.img}
                 alt={project.title}
-                height={720}
-                width={1280}
+                height={405}
+                width={720}
                 quality={90}
-                placeholder="blur"
                 className="z-[9] rounded"
               />
               <span
