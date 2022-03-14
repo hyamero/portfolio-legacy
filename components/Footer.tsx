@@ -1,25 +1,21 @@
 import React from "react";
-import {
-  AiOutlineLinkedin,
-  AiOutlineGithub,
-  AiOutlineInstagram,
-} from "react-icons/ai";
+import { FiArrowUpRight } from "react-icons/fi";
 
 interface FooterProps {}
 
 export const Footer: React.FC<FooterProps> = ({}) => {
   const icons = [
     {
+      title: "github",
       link: "https://github.com/hyamero",
-      component: <AiOutlineGithub />,
     },
     {
+      title: "instagram",
       link: "https://www.instagram.com/dale.hyamero/",
-      component: <AiOutlineInstagram />,
     },
     {
+      title: "linkedin",
       link: "https://www.linkedin.com/in/daleban/",
-      component: <AiOutlineLinkedin />,
     },
   ];
 
@@ -50,14 +46,15 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           &copy; <span className="text-[1.1rem] sm:text-xs">2022</span> DALE B.{" "}
           <span className="italic">All Rights Reserved.</span>
         </p>
-        <ul className="flex space-x-6 text-[1.4rem] text-white sm:text-[1.2rem]">
+        <ul className="flex space-x-6 text-white">
           {icons.map((icon) => (
-            <li key={icon.link}>
+            <li key={icon.link} className="hover-effect-sm">
               <a
                 href={icon.link}
-                className="transition-colors hover:text-gray-300"
+                className="hover-effect whitespace-nowrap font-syne text-xs font-bold uppercase tracking-widest transition-colors hover:text-gray-300 sm:text-[0.6rem]"
               >
-                {icon.component}
+                {icon.title}
+                <FiArrowUpRight className="inline-block" />
               </a>
             </li>
           ))}

@@ -87,6 +87,28 @@ html {
   left: 0;
 }
 
+.hover-effect-sm a {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+.hover-effect-sm a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  margin-top: 1px;
+  display: block;
+  right: 0;
+  background: #fdb140;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.hover-effect-sm a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
 .clip-0 {
   clip-path: inset(50% 0% 0% 0%);
   transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
