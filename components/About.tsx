@@ -13,18 +13,18 @@ export const About: React.FC<AboutProps> = ({}) => {
       id="about"
       className="relative mx-auto min-h-[105vh] max-w-[1920px] overflow-hidden bg-black px-[200px] font-helvetica sm:block sm:min-h-[75vh] lg:px-[50px]"
     >
-      <h4 className="borderline relative z-10 mx-[auto] w-[100%] pt-24 pb-14 tracking-wider sm:mb-20 sm:pb-5 md:pt-10  md:text-xs">
+      <h2 className="borderline relative z-10 mx-[auto] w-[100%] pt-24 pb-14 tracking-wider sm:mb-20 sm:pb-5 md:pt-10  md:text-xs">
         ABOUT
-      </h4>
+      </h2>
       <div className="w-[70%] sm:w-full">
         <div className="about-text items-between relative z-10 flex flex-col justify-center gap-10 sm:gap-0">
-          <h2 className="sub-text mt-20 whitespace-nowrap text-left text-base uppercase text-ylw-100 sm:mt-0 sm:mb-0 sm:-translate-y-1/2 sm:text-left sm:text-xs ">
+          <h3 className="sub-text mt-20 whitespace-nowrap text-left text-base uppercase text-ylw-100 sm:mt-0 sm:mb-0 sm:-translate-y-1/2 sm:text-left sm:text-xs ">
             {" "}
             <span className="text-sub"> Hey, I&apos;m</span> <br />
             <span className="font-sprat text-4xl font-medium text-ylw-200 sm:text-2xl">
               Joseph Dale Bañares
             </span>
-          </h2>
+          </h3>
           <p className="sub-text sub-text mb-20 w-[80%] whitespace-normal text-left uppercase text-ylw-100 sm:mt-0 sm:mb-10 sm:text-left sm:text-xs md:mb-10">
             I&apos;m an eighteen year old front-end web developer based in
             Bacolod City, Philippines. I specialize in creative development and

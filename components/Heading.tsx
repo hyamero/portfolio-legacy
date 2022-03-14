@@ -76,11 +76,9 @@ const Heading: React.FC<HeadingProps> = ({ loaderComplete }) => {
           <div
             data-scroll
             data-scroll-speed={-2}
-            className="show-anim absolute left-1/2 -bottom-52 cursor-pointer opacity-0 sm:-bottom-20"
+            className="show-anim absolute left-1/2 -bottom-52 opacity-0 sm:-bottom-20"
           >
-            <a href="#about" data-scroll-to>
-              <CgMouse className="relative -left-4 text-2xl text-white/75 md:text-base" />
-            </a>
+            <CgMouse className="relative -left-4 select-none text-2xl text-white/75 md:text-base" />
           </div>
         </div>
       </header>

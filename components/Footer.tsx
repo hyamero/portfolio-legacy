@@ -29,9 +29,9 @@ export const Footer: React.FC<FooterProps> = ({}) => {
       className="relative flex h-[110vh] max-w-[1920px] flex-col items-center justify-center bg-dark px-[200px] lg:px-[50px]"
     >
       <div className="relative w-[80vw]  max-w-[1440px]  whitespace-nowrap py-8 text-center font-normal text-white">
-        <h4 className="mx-[auto] pb-14 font-helvetica tracking-wider sm:pb-7 md:text-xs">
+        <h3 className="mx-[auto] pb-14 font-helvetica tracking-wider sm:pb-7 md:text-xs">
           GET IN TOUCH
-        </h4>
+        </h3>
         <div
           id="contact"
           className="hover-effect text-clamp borderline border-t py-8 font-playfair italic leading-none"
