@@ -12,8 +12,8 @@ import SEO from "../next-seo-config";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <GlobalContextProvider>
+      <DefaultSeo {...SEO} />
       <Layout>
-        <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </Layout>
     </GlobalContextProvider>

@@ -5,12 +5,12 @@ const imgUrl =
   "https://raw.githubusercontent.com/hyamero/portfolio/main/public/img/Thumbnail.png";
 
 export default {
-  title: "Joseph Dale Bañares - Creative Developer",
+  title: "Joseph Dale Bañares | Creative Developer",
   description,
   openGraph: {
     type: "website",
     url: "https://daleban.tech",
-    title: "Dale Bañares - Creative Developer",
+    title: "Dale Bañares | Creative Developer",
     description,
     images: [
       {
@@ -32,6 +32,7 @@ export default {
       },
     ],
     site_name: "Portfolio",
+    locale: "en_US",
   },
   twitter: {
     cardType: "summary_large_image",
