@@ -12,7 +12,7 @@ export const Projects: React.FC = ({}) => {
       <h3
         data-scroll
         data-scroll-speed={-3}
-        className="absolute top-[-10rem] font-playfair text-[15vw] font-medium italic text-black/25 sm:-top-20"
+        className="absolute top-[0rem] font-syne text-[1vw] font-bold uppercase text-black/25 sm:-top-20"
       >
         Projects
       </h3>

@@ -7,30 +7,39 @@ export const Marquee: React.FC<MarqueeProps> = ({}) => {
   return (
     <div className="relative z-10 mt-20 max-w-[1920px]">
       <div className="mb-20 sm:mb-10">
-        <div
-          data-scroll
-          data-scroll-direction="horizontal"
-          data-scroll-speed={2}
-          className="flex space-x-20 md:space-x-10"
-        >
-          {codeTechs.map((tech: any, i: number) => (
-            <div key={i} className="tech-text font-druk">
-              {tech}
-            </div>
-          ))}
+        <div className="flex">
+          <div className="marquee flex space-x-20 md:space-x-10">
+            {codeTechs.map((tech: any, i: number) => (
+              <div key={i} className="tech-text font-druk">
+                {tech}
+              </div>
+            ))}
+          </div>
+          <div className="marquee2 flex space-x-20 md:space-x-10">
+            {codeTechs.map((tech: any, i: number) => (
+              <div key={i} className="tech-text font-druk">
+                {tech}
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div
-          data-scroll
-          data-scroll-direction="horizontal"
-          data-scroll-speed={-2}
-          className="flex space-x-20 md:space-x-10"
-        >
-          {designTechs.map((tech: any, i: number) => (
-            <div key={i} className="tech-text font-druk text-ylw-100">
-              {tech}
-            </div>
-          ))}
+        {/* MARQUEE designTechs*/}
+        <div className="flex">
+          <div className="marqueeR flex space-x-20 md:space-x-10">
+            {designTechs.map((tech: any, i: number) => (
+              <div key={i} className="tech-text font-druk text-ylw-100">
+                {tech}
+              </div>
+            ))}
+          </div>
+          <div className="marqueeR2 flex space-x-20 md:space-x-10">
+            {designTechs.map((tech: any, i: number) => (
+              <div key={i} className="tech-text font-druk text-ylw-100">
+                {tech}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
