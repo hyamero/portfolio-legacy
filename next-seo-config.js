@@ -5,7 +5,7 @@ const imgUrl =
   "https://raw.githubusercontent.com/hyamero/portfolio/main/public/img/Thumbnail.png";
 
 export default {
-  title: "Joseph Dale Bañares | Creative Developer",
+  title: "Dale Bañares | Creative Developer",
   description,
   openGraph: {
     type: "website",
