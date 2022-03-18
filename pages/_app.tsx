@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import "../styles/marquee.css";
 import "../styles/text-hover.css";
 
 import React from "react";

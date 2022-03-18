@@ -1,20 +1,9 @@
 export const codeTechs = [
-  " ",
   "react",
   "typscript",
   "tailwind",
   "three.js",
   "react",
-  "typscript",
-  "tailwind",
-  "react",
-  "next.js",
-  "three.js",
-  "typscript",
-  "tailwind",
-  "next.js",
-  "three.js",
-  " ",
 ];
 
 export const designTechs = [
@@ -23,13 +12,4 @@ export const designTechs = [
   "photoshop",
   "blender",
   "premiere pro",
-  "figma",
-  "photoshop",
-  "premiere pro",
-  "blender",
-  "figma",
-  "photoshop",
-  "premiere pro",
-  "blender",
-  " ",
 ];
