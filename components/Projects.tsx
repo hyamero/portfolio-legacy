@@ -17,7 +17,7 @@ export const Projects: React.FC = ({}) => {
         Projects
       </h3>
       {projects.map((project: any, i: number) => (
-        <>
+        <React.Fragment key={project.title}>
           <span
             data-scroll
             data-scroll-speed={7 + i}
@@ -63,7 +63,7 @@ export const Projects: React.FC = ({}) => {
               </span>
             </div>
           </a>
-        </>
+        </React.Fragment>
       ))}
     </section>
   );
