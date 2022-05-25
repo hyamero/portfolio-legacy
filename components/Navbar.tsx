@@ -1,7 +1,6 @@
 import { NextRouter, useRouter } from "next/router";
 import React, { useEffect } from "react";
 import gsap from "gsap";
-import Achievements from "../pages/achievements";
 
 interface NavbarProps {}
 
@@ -42,7 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
         <a
           onClick={async () => {
             await router.push("/");
-            if (path.substring(1) === "achievements") {
+            if (path.substring(1) === "experience") {
               hideElements();
               setTimeout(() => {
                 router.reload();
@@ -73,20 +72,20 @@ interface NavBtnsProps {
 const NavBtns: React.FC<NavBtnsProps> = ({ path, router }) => {
   return (
     <>
-      {path.substring(1) !== "achievements" ? (
+      {path.substring(1) !== "experience" ? (
         <>
           {navText.map((text, i) => (
             <a data-scroll-to key={i} href={`#${text}`} className="menu-item">
               <div>
                 <span className="menu-item-text font-sprat font-normal uppercase tracking-wider">
-                  {text}
+                  {text.toUpperCase()}
                 </span>
               </div>
             </a>
           ))}
           <a
             onClick={async () => {
-              await router.push("/achievements");
+              await router.push("/experience");
               if (path === "/") {
                 hideElements();
                 setTimeout(() => {
@@ -100,7 +99,7 @@ const NavBtns: React.FC<NavBtnsProps> = ({ path, router }) => {
           >
             <div>
               <span className="menu-item-text font-sprat font-normal uppercase tracking-wider">
-                achievements
+                experience
               </span>
             </div>
           </a>

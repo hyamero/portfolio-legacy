@@ -118,6 +118,13 @@ html {
   clip-path: inset(0% 0% 0% 0%);
 }
 
+@media (max-width: 1288px) {
+  .img-res {
+    top: 33rem;
+    width: 45%;
+  }
+}
+
 @media (max-width: 1070px) {
   .sub-sentence {
     right: 7rem;

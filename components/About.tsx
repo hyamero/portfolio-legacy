@@ -1,11 +1,13 @@
 import React from "react";
 import { Marquee } from "./Marquee";
+import Image from "next/image";
+import image from "../public/img/dale.jpg";
 
 interface AboutProps {}
 
 export const About: React.FC<AboutProps> = ({}) => {
-  const image =
-    "https://images.unsplash.com/photo-1615840788094-a4df00dce64b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80";
+  // const image =
+  //   "https://images.unsplash.com/photo-1615840788094-a4df00dce64b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80";
 
   return (
     <section
@@ -45,13 +47,28 @@ export const About: React.FC<AboutProps> = ({}) => {
           <div className="space h-80 bg-none lg:h-52"></div>
         </div>
       </div>
-      <img
+      {/* <img
         data-scroll
         data-scroll-speed={2}
         src={image}
         alt="image by Jocelyn Morales"
         className="absolute -bottom-36 right-0 z-[9] w-[38rem] rounded-tr-full rounded-tl-full sm:-bottom-24 sm:w-[20rem]"
-      />
+      /> */}
+      <div
+        data-scroll
+        data-scroll-speed={2}
+        className="img-res absolute top-96 right-0 z-[9] rounded-tr-full rounded-tl-full sm:top-96"
+      >
+        <Image
+          priority
+          src={image}
+          alt="Dale B."
+          height={852}
+          width={568}
+          quality={90}
+          className="rounded-tr-full rounded-tl-full"
+        />
+      </div>
       <div className="absolute bottom-0 -left-40">
         <Marquee />
       </div>
