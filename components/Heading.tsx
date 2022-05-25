@@ -72,13 +72,15 @@ const Heading: React.FC<HeadingProps> = ({ loaderComplete }) => {
           FRONT-END DEVELOPER <br /> AND UI/UX DESIGNER, <br /> FULL-STACK
           CAPABLE
         </p>
-        <div
+        <a
+          href="#about"
+          data-scroll-to
           data-scroll
           data-scroll-speed={-2}
           className="show-anim absolute left-1/2 -bottom-52 opacity-0 sm:-bottom-20"
         >
           <CgMouse className="relative -left-4 select-none text-2xl text-white/75 md:text-base" />
-        </div>
+        </a>
       </div>
     </header>
   );
