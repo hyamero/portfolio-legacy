@@ -99,7 +99,7 @@ const NavBtns: React.FC<NavBtnsProps> = ({ path, router }) => {
           >
             <div>
               <span className="menu-item-text font-sprat font-normal uppercase tracking-wider">
-                experience
+                EXPERIENCE
               </span>
             </div>
           </a>
@@ -117,7 +117,7 @@ const NavBtns: React.FC<NavBtnsProps> = ({ path, router }) => {
         >
           <div>
             <span className="menu-item-text font-sprat font-normal uppercase tracking-wider">
-              home
+              BACK &nbsp; HOME
             </span>
           </div>
         </a>

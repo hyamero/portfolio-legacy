@@ -20,6 +20,12 @@
     background-clip: text;
   }
 
+  .text-ylw-grad {
+    @apply font-bold text-transparent;
+    background-image: linear-gradient(#ffb64b, #f59e1c);
+    background-clip: text;
+  }
+
   .sub-text {
     @apply whitespace-nowrap font-syne font-bold tracking-wide text-sub;
     font-size: clamp(0.01rem, 1.6vw, 1rem);
