@@ -50,6 +50,8 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           {icons.map((icon) => (
             <li key={icon.link} className="hover-effect-sm">
               <a
+                target="_blank"
+                rel="noreferrer"
                 href={icon.link}
                 className="hover-effect whitespace-nowrap font-syne text-xs font-bold uppercase tracking-widest transition-colors hover:text-gray-300 sm:text-[0.6rem]"
               >
