@@ -18,16 +18,16 @@ export const projects = [
   {
     title: "Boisson",
     img: boisson,
-    link: "https://boisson-cocktail.vercel.app/",
+    link: "https://github.com/hyamero/boisson-ctdb",
   },
   {
     title: "Cayenne",
     img: cayenne,
-    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    link: "https://github.com/hyamero",
   },
   {
     title: "Haboleon",
     img: haboleon,
-    link: "https://youtu.be/oHg5SJYRHA0",
+    link: "https://github.com/hyamero",
   },
 ];
