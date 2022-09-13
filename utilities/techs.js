@@ -1,6 +1,6 @@
 export const codeTechs = [
   "react",
-  "typscript",
+  "typescript",
   "tailwind",
   "three.js",
   "react",
