@@ -1,7 +1,7 @@
-import boisson from "../public/img/projects/boisson.jpg";
+import chatti from "../public/img/projects/chatti.jpg";
 import collectiveApis from "../public/img/projects/collective-api.jpg";
-import cayenne from "../public/img/projects/car.jpg";
-import haboleon from "../public/img/projects/haboleon.jpg";
+import marbre from "../public/img/projects/marbre.jpg";
+import portfolio3d from "../public/img/projects/portfolio3d.png";
 import iphone from "../public/img/projects/iphone.jpg";
 
 export const projects = [
@@ -11,23 +11,23 @@ export const projects = [
     link: "https://iphone-config.vercel.app/",
   },
   {
+    title: "Chatti",
+    img: chatti,
+    link: "https://chatti.vercel.app/",
+  },
+  {
+    title: "Marbre",
+    img: marbre,
+    link: "https://marbre-landing.vercel.app/",
+  },
+  {
     title: "Collective Apis",
     img: collectiveApis,
-    link: "https://collective-api.vercel.app/",
+    link: "https://github.com/hyamero/collective-api",
   },
   {
-    title: "Boisson",
-    img: boisson,
-    link: "https://boisson-cocktail.vercel.app/",
-  },
-  {
-    title: "Cayenne",
-    img: cayenne,
-    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    title: "Haboleon",
-    img: haboleon,
-    link: "https://youtu.be/oHg5SJYRHA0",
+    title: "3D Portfolio",
+    img: portfolio3d,
+    link: "https://daleban3d.vercel.app/",
   },
 ];
