@@ -16,55 +16,57 @@ export const Projects: React.FC = ({}) => {
       >
         Projects
       </h3>
-      {projects.map((project: any, i: number) => (
-        <>
-          <span
-            data-scroll
-            data-scroll-speed={7 + i}
-            data-scroll-direction="horizontal"
-            className="text-clamp pointer-events-none relative z-[3] select-none whitespace-nowrap font-playfair text-9xl italic text-black/25"
-          >
-            {project.title} <span className="relative top-3">*</span>{" "}
-            {project.title} <span className="relative top-3">*</span>{" "}
-            {project.title}{" "}
-            <span className="relative top-3 animate-spin">*</span>{" "}
-            {project.title} <span className="relative top-3">*</span>{" "}
-            {project.title} <span className="relative top-3">*</span>{" "}
-            {project.title} <span className="relative top-3">*</span>{" "}
-            {project.title} <span className="relative top-3">*</span>
-          </span>
-          <a
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed={7 + i}
-            key={i}
-            className="clip-0 img cursor-pointer overflow-hidden"
-            href={project.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div data-scroll data-scroll-speed={2} className="relative">
-              <Image
-                priority
-                src={project.img}
-                alt={project.title}
-                height={405}
-                width={720}
-                quality={90}
-                className="z-[9] rounded"
-              />
-              <span
-                data-scroll
-                data-scroll-speed={-2}
-                data-scroll-direction="horizontal"
-                className="text-clamp absolute bottom-5 left-20 z-[10] whitespace-nowrap font-playfair italic text-white mix-blend-difference"
-              >
-                {project.title}
-              </span>
-            </div>
-          </a>
-        </>
-      ))}
+      {projects.map((project: any, i: number) => {
+        const { title, img, link } = project;
+        return (
+          <React.Fragment key={title}>
+            <span
+              data-scroll
+              data-scroll-speed={7 + i}
+              data-scroll-direction="horizontal"
+              className="text-clamp pointer-events-none relative z-[3] select-none whitespace-nowrap font-playfair text-9xl italic text-black/25"
+            >
+              {title} <span className="relative top-3">*</span> {title}{" "}
+              <span className="relative top-3">*</span> {title}{" "}
+              <span className="relative top-3 animate-spin">*</span> {title}{" "}
+              <span className="relative top-3">*</span> {title}{" "}
+              <span className="relative top-3">*</span> {title}{" "}
+              <span className="relative top-3">*</span> {title}{" "}
+              <span className="relative top-3">*</span>
+            </span>
+            <a
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed={7 + i}
+              key={i}
+              className="clip-0 img cursor-pointer overflow-hidden"
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div data-scroll data-scroll-speed={2} className="relative">
+                <Image
+                  priority
+                  src={img}
+                  alt={title}
+                  height={405}
+                  width={720}
+                  quality={90}
+                  className="z-[9] rounded"
+                />
+                <span
+                  data-scroll
+                  data-scroll-speed={-2}
+                  data-scroll-direction="horizontal"
+                  className="text-clamp absolute bottom-5 left-20 z-[10] whitespace-nowrap font-playfair italic text-white mix-blend-difference"
+                >
+                  {title}
+                </span>
+              </div>
+            </a>
+          </React.Fragment>
+        );
+      })}
     </section>
   );
 };
