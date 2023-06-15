@@ -11,7 +11,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
     },
     {
       title: "instagram",
-      link: "https://www.instagram.com/dale.hyamero/",
+      link: "https://www.instagram.com/hyamero/",
     },
     {
       title: "linkedin",
